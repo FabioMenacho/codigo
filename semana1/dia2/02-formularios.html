@@ -55,22 +55,32 @@
             <label for="mensaje">Escoja turno:</label>
             <br />
             <label for="dia">Día</label>
-            <input type="radio" id="dia" name="turno" />
+            <input type="radio" id="dia" name="turno" checked />
             <br />
             <label for="noche">Noche</label>
             <input type="radio" id="noche" name="turno" />
         </div>
-        <div>
-            <label for="">Seleccione equipos a utilizar:</label>
+        <!-- Para poner un recuadro -->
+        <fieldset>
+            <legend>Seleccione equipos a utilizar:</legend>
             <br />
             <label for="audios">Audifonos</label>
-            <input type="checkbox" id="audios"/>
+            <input type="checkbox" id="audios" checked />
             <br />
             <label for="laptop">Laptop</label>
             <input type="checkbox" id="laptop"/>
             <br />
             <label for="mouse">Mouse</label>
             <input type="checkbox" id="mouse"/>
+        </fieldset>
+        <div>
+          <label for="color">Seleccione color:</label>
+          <input type="color" id="color">
+        </div>
+        <div>
+          <button type="submit">Guardar</button>
+          <button type="button">Consultar DNI</button>
+          <button type="reset">Limpiar formulario</button>
         </div>
       </form>
     </main>
