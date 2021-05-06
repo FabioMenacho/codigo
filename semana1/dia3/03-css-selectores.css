@@ -1,0 +1,52 @@
+/* h2 seleccion a todos los h2 de la pagina */
+h2 {
+  color: crimson;
+}
+/* Tambien se puede configurar por grupos */
+h1,
+p {
+  color: #222;
+}
+
+/* clases se representan por un punto, todos los elementos con esa clase se modificaran */
+.sombra {
+  box-shadow: 0px 2px 8px #888;
+}
+
+.text-danger {
+  color: crimson;
+}
+
+.text-success {
+  color: green;
+}
+
+/* secion p -> todos los parrafos que sean descendientes (que estan dentro) de un section */
+section p {
+  font-size: 14px;
+}
+
+/* Todas las etiquetas que tengan la clase "badge-black" que sean descendientes de un parrafo */
+p .badge-black {
+  background-color: #222;
+  color: #eee;
+}
+
+/* Todos los li que sean hijos de un ul se modifican */
+ul li {
+  font-style: italic;
+}
+
+/* Todos los li que sean hijos primeros de un ol se modifican */
+ol > li {
+  font-style: normal;
+}
+
+/* seudo clases */
+
+/* elemento hover: estilos que se aplicaran a un elemento cuando el mouse este encima del mismo */
+
+ul > li:hover {
+    background-color: #eee;
+}
+

@@ -1,0 +1,22 @@
+/* Pseudoclases */
+
+/* 
+De cada grupo de elementos el que ocupe la 3era posciion será afectado
+elemento: :nth-child(3) 
+*/
+
+tr:nth-child(3) {
+  background-color: #eee;
+}
+
+/* 
+even: pares
+odd: impares
+*/
+tbody tr:nth-child(even) {
+  background-color: #ccc;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #aaa;
+}
