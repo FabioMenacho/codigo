@@ -1,0 +1,37 @@
+body {
+    background-color: #333;
+    color: #eee;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    /* 1em = 16px
+    1rem = 16px */
+    font-weight: 900;
+    text-align: center;    
+    letter-spacing: 16px;
+    word-spacing: 20px;
+}
+
+.parrafo1{
+    text-align: center;
+    line-height: 25px;
+}
+
+.btn1{
+    text-align: center;
+}
+
+.articulo1{
+    text-align: center;
+}
+
+.tachado{
+    text-decoration: line-through;
+}
+
+a{
+    text-decoration: none;
+    color: #eee;
+}

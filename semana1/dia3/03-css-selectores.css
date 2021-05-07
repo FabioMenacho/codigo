@@ -21,7 +21,7 @@ p {
   color: green;
 }
 
-/* secion p -> todos los parrafos que sean descendientes (que estan dentro) de un section */
+/* section p -> todos los parrafos que sean descendientes (que estan dentro) de un section */
 section p {
   font-size: 14px;
 }
@@ -47,6 +47,5 @@ ol > li {
 /* elemento hover: estilos que se aplicaran a un elemento cuando el mouse este encima del mismo */
 
 ul > li:hover {
-    background-color: #eee;
+  background-color: #eee;
 }
-
