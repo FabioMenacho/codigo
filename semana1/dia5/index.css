@@ -1,0 +1,140 @@
+/*  
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*{
+    margin: 0;
+    background-color: #000;
+}
+*/
+@font-face {
+  font-family: "dancing";
+  src: url(./../fuentes-globales/DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "mi-primera-fuente";
+  src: url(./../fuentes-globales/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: "mi-fuente-medium";
+  src: url(./../fuentes-globales/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: "mi-fuente-bold";
+  src: url(./../fuentes-globales/Montserrat-Bold.ttf);
+}
+h1 {
+  font-family: "mi-primera-fuente";
+  color: #437019;
+}
+
+.descripcion {
+  font-family: "mi-fuente-medium";
+  font-size: 12px;
+  width: 200px;
+  height: 80px;
+  overflow: scroll;
+}
+
+.segundo-titulo {
+  font-family: "mi-fuente-bold";
+}
+
+.fuente-link {
+  font-family: "Kdam Thmor", cursive;
+}
+
+.fuente-link::first-letter {
+  font-size: 42px;
+}
+
+a {
+  font-family: "mi-primera-fuente";
+  background-color: #c00;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+a:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #c00;
+}
+
+.portada-codigo {
+  background-image: url(./../imagenes-global/mar.jpg);
+  background-position: center;
+  height: 50vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.alto-total {
+  height: 100vh;
+}
+
+.tercer-titulo {
+  font: 42px "dancing";
+}
+
+.tercer-parrafo {
+  font: 16px "dancing";
+  border: 1px solid #c00;
+  background: linear-gradient(0deg, rgb(179, 231, 56) 80%, #2d0de6 20%);
+}
+
+.btn-iniciar-sesion {
+  margin-top: 30px;
+  font-family: "dancing";
+  background: linear-gradient(0deg, rgb(175, 207, 30), #170cac);
+  border: none;
+  color: #c00;
+}
+
+.cuarto-parrafo {
+  margin-top: 30px;
+  font-family: "dancing";
+  font-size: 18px;
+  border: 1px solid #c00;
+  background: -webkit-radial-gradient(center, circle, #3110e9, #e9b610);
+}
+
+.primera-imagen {
+  filter: blur(5px);
+  /* blur 1-10px, grayscale 0.1-1, sepia 0.1-1, brightness0.1-10, invert 0.1-1, opacity 0-1, hue-rotacion 0-360 (invierte colores), contrast 0.1-1, saturate 0.1-1 */
+}
+
+.segunda-imagen {
+  filter: grayscale(1);
+}
+
+.tercera-imagen {
+  filter: sepia(1);
+}
+
+.cuarta-imagen {
+  filter: brightness(3);
+}
+
+.quinta-imagen {
+  filter: invert(0.4);
+}
+
+.sexta-imagen {
+  filter: opacity(0.1);
+}
+
+.septima-imagen {
+  filter: hue-rotate(270deg);
+}
+
+.octava-imagen {
+    filter: contrast(1);
+  }
+

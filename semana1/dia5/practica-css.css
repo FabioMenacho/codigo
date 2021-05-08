@@ -1,0 +1,70 @@
+
+@font-face {
+    font-family: "dancing";
+    src: url(./../fuentes-globales/DancingScript-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "regular";
+    src: url(./../fuentes-globales/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: "bold";
+    src: url(./../fuentes-globales/Montserrat-Bold.ttf);
+}
+
+h1{
+    font-family: "dancing";
+    font-size: 60px;
+    background-position: center;
+}
+
+h2{
+    font-family: "bold";
+}
+
+p{
+    font-family: "regular";
+    font-size: 25px;
+}
+
+.recuadro{
+    border: 2px solid #ccc;
+    background: linear-gradient(0deg, #ccc, rgb(228, 17, 17));
+    width: 200px;
+    height: 80px;
+    overflow: scroll;
+}
+
+.imagen{
+    filter: grayscale(1);
+}
+
+
+
+button{
+    font-family: "bold";
+    font-size: 25px;
+    margin-top: 10px;
+    border: 1px solid rgb(233, 7, 7);
+    background-color: rgb(192, 230, 22);
+    border-radius: 6px;
+}
+
+button:hover{
+    background-color: black;
+    color: blue;
+    border: none;
+}
+
+footer{
+    color: darkgreen;
+}
+
+.imagen-css{
+    background-image: url(./../imagenes-global/unknown.png);
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
