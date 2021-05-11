@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.cuadrado {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  text-align: center;
+  margin: 0 auto;
+  /* sombras: pixeles eje x, pixel eje y, difuminado, color inset: sombras internas*/
+  box-shadow: 2px 5px 8px #bbb inset;
+  border-radius: 8px;
+  margin-top: 50px;
+}
+
+.cuadrado:hover{
+    box-shadow: 0px 0px 4px #bbb;
+}
+
+h1{
+  text-shadow: 3px 3px 3px #ddd;
+}

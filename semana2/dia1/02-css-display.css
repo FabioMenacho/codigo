@@ -1,0 +1,36 @@
+*{
+margin:0;
+box-sizing:border-box;
+padding:0;
+}
+
+header{
+    height: 60px;
+    box-shadow: 0px 0px 8px #bbb;
+}
+
+.color-primario{
+    color: magenta;
+}
+
+.navegacion{
+    display: none;   /* desaparece un elemento del DOM (documento) y su espacio es ocupado por los demás elementos */
+    /*opacity: 0;  lo pone transparente pero el elemento aun queda en su sitio y se puede seleccionar o dar click */
+    /*visibility: hidden ;  convierte un elemento en invisible y nose le puede seleccionar o dar click sin embargo u espacio en el DOM es respetado */
+}
+
+aside{
+    height: calc(100vh - 60px); /* calc sirve para realizar operaciones en diferentes unidades de medida */
+    background-color: magenta;
+    width: 240px;
+}
+
+section, aside{
+    display: inline-block;
+}
+
+section{
+    background-color: mediumblue;
+    width: calc(100% - 250px);
+    height: calc(100vh - 60px);
+}

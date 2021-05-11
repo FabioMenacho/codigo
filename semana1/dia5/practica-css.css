@@ -29,6 +29,10 @@ p{
     font-size: 25px;
 }
 
+.pie{
+    font-family: 'Girassol', cursive;
+}
+
 .recuadro{
     border: 2px solid #ccc;
     background: linear-gradient(0deg, #ccc, rgb(228, 17, 17));
@@ -60,6 +64,7 @@ button:hover{
 
 footer{
     color: darkgreen;
+    font-size: 25px;
 }
 
 .imagen-css{

@@ -1,0 +1,100 @@
+:root {
+  --color-primario: #ff44ee;
+  --color-secundario: rgb(138, 41, 41);
+  --rojo-trasnparente: rgba(20, 55, 63, 0.5);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+h1 {
+  color: var(--color-primario);
+  background-color: #ddd;
+  padding: 10px 20px;
+  margin-bottom: 50px;
+}
+
+.form-control {
+margin-bottom: 5px;
+  border: none;
+  outline: none;
+  padding: 8px 8px 8px 35px;
+  border: 1px dashed #ddd;
+  border-bottom: 3px solid var(--color-primario);
+  background-image: url(./..//imagenes-global/icono-id.png);
+  background-position: 5px center;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  border-radius: 6px;
+}
+
+/* Cuando el input tiene el cursor dentro de si */
+.form-control:focus{
+background-image: url(./../imagenes-global/icono-id-hover.png);
+background-position: 5px center;
+text-align: 30 px center;
+}
+.cuadrado {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: var(--color-secundario);
+  margin-top: 20px;
+}
+
+/* tamaños */
+
+.seccion1 {
+  background-color: var(--color-primario);
+  height: 60px;
+  width: 50%; /* del ancho del padre */
+}
+
+.articulo1 {
+  background-color: var(--rojo-trasnparente);
+  height: 30px;
+  width: 50%;
+}
+
+.parrafo1 {
+  width: 200px;
+  height: 100px;
+  background-color: #ddd;
+  /* overflow sirve para el desbordamiento del contenido de un elemento */
+  overflow: auto;
+}
+/* Personalizando el scroll */
+
+/* ancho del scroll */
+.parrafo1::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* la barra de desplazamiento */
+.parrafo1::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: chartreuse;
+}
+
+/* pista por donde se desplaza la barra */
+.parrafo1::-webkit-scrollbar-track {
+  background-color: #aa4433;
+}
+
+/* Los elementos inline no pueden tener ancho ni alto definido */
+
+.badge-rojo {
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+}
+
+.imagen{
+    width: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+

@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to top left, #222, #444, #222);
+  /* para todos los navegadores 
+  background-image: -moz-linear-gradient(to top left, #444, #999, #444);
+  background-image: -o-linear-gradient(to top left, #444, #999, #444);
+  background-image: -webkit-linear-gradient(to top left, #444, #999, #444);
+  */
+  border: 1px solid yellow;
+  min-height: 100vh;
+  /* 
+    min-height vs height
+    height: define una altura estatica independientemente del contenido de un elelemnto
+    min-height: define una altura mínima para un elemento, si su contenido necesita más altura, entonces el elemento se expandirá
+ */
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 4rem;
+    font-family: sans-serif;
+    /* backgraound-clip: máscara de recorte en forma del texto interno */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, rgb(232, 248, 10), rgb(245, 101, 4));
+}
+
+.card{
+    width: 300px;
+    height: 400px;
+    box-shadow: 0px 0px 8px #bbb;
+    border-radius: 10px;
+    /* margin: 50px auto 0 auto; */
+    /* transform: translate(100px, -100px); */
+    transition: transform 0.5s ease, background-color 3s ease;
+    animation: cuadrado 3s ease 0s infinite;
+}
+
+.card:hover{
+    transform: scale(1.1, 1.1) rotate(-5deg);
+    cursor: pointer;
+    background-color: #555;
+}
+
+@keyframes cuadrado{
+    0%{
+        height: 50px;
+        width: 50px;
+    }
+    25%{
+        height: 50px;
+        width: 50px;
+        transform: translate(300px, 0px);
+    }
+    50%{
+        height: 50px;
+        width: 50px;
+        transform: translate(300px, 300px);
+    }
+    75%{
+        height: 50px;
+        width: 50px;
+        transform: translate(0px, 300px);
+    }
+    100%{
+        height: 50px;
+        width: 50px;
+    }
+}
