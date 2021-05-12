@@ -14,9 +14,48 @@ header{
 }
 
 .navegacion{
-    display: none;   /* desaparece un elemento del DOM (documento) y su espacio es ocupado por los demás elementos */
+    /*display: none;    desaparece un elemento del DOM (documento) y su espacio es ocupado por los demás elementos */
     /*opacity: 0;  lo pone transparente pero el elemento aun queda en su sitio y se puede seleccionar o dar click */
     /*visibility: hidden ;  convierte un elemento en invisible y nose le puede seleccionar o dar click sin embargo u espacio en el DOM es respetado */
+}
+
+.navegacion ul {
+    /* border: 1px solid blue; */
+}
+
+.navegacion ul li{
+    /* border: 1px solid red; */
+    display: inline-block;
+    margin-right: 15px;
+    background-color: crimson;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.navegacion ul li a {
+    text-decoration: none;
+    color: #eee;
+    
+}
+
+.navegacion ul li:hover {
+    border: 1px solid red; 
+    background-color: white;
+    
+}
+.navegacion ul li i{
+    transition: all 0.5s ease;
+}
+
+.navegacion ul li:hover a{
+    text-decoration: underline;
+    color: black;
+}
+
+.navegacion ul li:hover i{
+    transform: rotate(45deg);
 }
 
 aside{

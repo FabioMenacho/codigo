@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+html {
+    /* Propiedad para que los links internos de una página hagan el scroll con aceleración */
+    scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #333;
+}
+
+/* 
+position: relative
+ - Puedo mover al elemento con 2 ejes de referencia:
+     - top: cantidad de pixeles desde el extremo superior.
+    - left: cantidad de pixeles desde el extremo izquierdo.
+ - Si el elemento es movido su espacio original se respeta por los demás elementos.
+ - Un elemento también puede tener position: relative cuando tiene  hijos con position: absolute de tal forma que dichos hijos nose salgan del área del padre.
+ */
+.cuadrado-amarillo {
+  height: 150px;
+  width: 150px;
+  border: 1px solid yellow;
+  position: relative;
+  top: 10px;
+}
+
+.cuadrado-rosa {
+  height: 150px;
+  width: 150px;
+  border: 1px solid pink;
+  position: relative;
+  left: calc(50% - 75px);
+}
+
+/* 
+position: absolute
+ - El elemento sale del contexto de los demás elementos (tienen efecto de flotar sobre los demás elementos).
+ - Los elementos que no tienen position absolute ocupan el espacio de este elemento.
+ - Puedo mover al elemento con 4 ejes de referencia:
+    - top, left, right y bottom
+ - Obligatoriamente debemos especificar 2 ejes de referencia.
+ - El elemento absolute se mueve con referencia al próximo padre directo que tenga position: relative.
+ - De no cumplirse el anterior punto, el padre de referencia sería el elemento HTML. 
+ */
+.boton-flotante {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid #eee;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  border: 1px solid #bbb;
+  margin: 0 auto;
+  margin-top: 20px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.card span {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  transition: all 0.5s ease;
+}
+
+.card img {
+  transition: all 0.5s ease;
+}
+
+.card:hover img {
+  filter: blur(1px);
+}
+
+.card:hover span {
+  top: 50%; 
+  right: 50%; 
+  /* Cuando usamos transform: translate, si las medidas están en porcentaje, dicho porcentaje se basan en referencia al ancho y alto del elemento */
+  transform: translate(50%, -50%);
+}
+
+/*  
+position:fixed
+- El elemento es posicionado respecto al viewoport (el área de posicionamiento de la página).
+- Es decir, si el scroll se mueve por ejemplo, el elemento se mantiene fijado con referencia la viewport.
+- Se puede anclar hasta con 4 puntos de referencia: top, left, right y bottom. 
+- También es flotante pero se mueve con el viewport.
+*/
+
+.boton-fixed{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.boton-fixed a {
+    color: #eee;
+    
+}
