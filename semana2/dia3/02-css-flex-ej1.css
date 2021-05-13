@@ -1,0 +1,32 @@
+*{
+margin:0;
+box-sizing:border-box;
+padding:0;
+}
+
+.header{
+    height: 60px;
+    border: 1px solid black;
+    display: flex;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+.header__nav{
+    flex: 1;
+    /* background-color: cyan; */
+}
+
+.header__cart{
+    /* background-color: brown; */
+}
+
+.header__links{
+    /* background-color: crimson; */
+    display: flex;
+    justify-content: center;
+    /* quitarle las viñetas a los li */
+    list-style: none;
+    /* gap: define un espacio entre elemento y elemento en el eje principal entre hijos */
+    gap: 2rem;
+}
