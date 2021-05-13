@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -5,17 +7,85 @@
 }
 
 :root {
-  --color-naranja: magenta;
+  --color-magenta: magenta;
 }
 body {
   min-height: 100vh;
-  background-color: #888;
+  background-color: #333;
+  font-family: "Roboto", sans-serif;
+}
+ 
+.card {
+  margin-top: 200px;
+  margin-left: calc(50% - 200px);
+  width: 400px;
+  height: 200px;
+  /* border: 8px; */
+  /* box-shadow: 0px 0px 10px #aaa; */
+ 
 }
 
-.card {
-    width: 400px;
-    height: 200px;
-    border: 8px;
-    box-shadow: 0px 0px 10px #aaa;
-    margin: 200px auto 0 auto;
-  }
+.card__icono {
+  position: absolute;
+  top: 200px;
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 200px;
+  border: 8px;
+  box-shadow: 0px 0px 10px black;
+  background-color: #333;
+  transition: all 1s ease;
+}
+
+.card__icono i{
+  margin: 60px 0px 10px 167px;
+  color: #666;
+}
+
+.card__icono .card__titulo{
+  text-align: center;
+  color: #666;  
+}
+
+.card__info {
+  position: absolute;
+  top: 200px;
+  left: calc(50% - 200px);
+  width: 400px;
+  height: 200px;
+  border: 8px;
+  box-shadow: 0px 0px 10px black;  
+  padding: 20px 20px;
+  line-height: 1.5rem;
+  background-color: white;
+  transition: all 1s ease;
+}
+
+.card:hover .card__icono{
+  transform: translate(0, -50%);
+  background-color: var(--color-magenta);
+}
+
+.card:hover i{  
+  color: white;
+}
+
+.card:hover .card__titulo{
+  text-align: center;
+  color: white;
+}
+
+.card:hover .card__info{
+  transform: translate(0, 50%);
+}
+
+.card__description{
+  margin-bottom: 20px;
+}
+
+.card__boton{
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid black;
+  color: black;
+}
