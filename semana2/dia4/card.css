@@ -1,0 +1,84 @@
+.card{
+    width:300px;
+    box-shadow: 0px 0px 15px #bbb;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* FIGURE */
+
+.card__figure{
+    overflow: hidden;
+    height: 250px;
+}
+
+.card__figure img{
+    /* para mover la imagen dentro del recuadro q esta ya que es muy grande */
+    position: relative;
+    left: -100px;
+}
+
+/* END FIGURE */
+
+/* SERVICES */
+
+.card__services{
+    display: flex;
+    height: 35px;
+    /* para que no tenga viñetas */
+    list-style: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.card__service{
+    flex: 1;   
+     /* El hjo se vuelve padre y a sus hijos (iconos) los alinea horizontal y vertical  */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #ddd;
+    /* para agrandar los iconos */
+    font-size: 1.2rem;
+    color: #bbb;
+    transition: all 0.3s ease;
+}
+
+.card__service:hover{
+    flex:1.2;
+    background-color: #D30314;
+    color: white;
+    cursor: pointer;
+}
+
+/* para corregir el doble border del ultimo li */
+.card__service:last-child{
+    border-right: none;
+}
+
+
+
+/* END SERVICES */
+
+/* DESCRIPTION */
+
+.card__description{
+padding: 0.8rem 0.5rem;
+}
+
+.card__tittle{
+    color: #434A54;
+    /* Para colocar todas las letra en mayuscula */
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+.card__text{
+    color: #434a54;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card__extra{
+color: #444;
+}
+/* END DESCRIPTION */
