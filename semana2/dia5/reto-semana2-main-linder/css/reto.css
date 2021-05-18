@@ -1,0 +1,321 @@
+@import "./font.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu-Light";
+}
+
+.bg__container {
+  position: relative;
+  border-bottom-left-radius: 80px;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.bg__container:before {
+  content: "";
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 400px;
+  background-image: url(../assets/images/bg-pattern-intro.svg);
+  background-color: hsl(13, 100%, 72%);
+  transform: scale(2);
+  height: 100%;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.menu {
+  list-style-type: none;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.menu__icon {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menu .nav__item {
+  margin: 15px;
+}
+
+.logo {
+  font-family: "Ubuntu-Bold";
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.btn__login {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-family: "Ubuntu-Bold";
+}
+
+.btn__login:hover {
+  transition: all 0.5s;
+  transform: scale(1.2);
+}
+
+.btn__primary {
+  background-color: #ffffff;
+  border: none;
+  padding: 15px;
+  padding-right: 40px;
+  padding-left: 40px;
+  border-radius: 22px;
+  color: hsl(13, 100%, 72%);
+  font-family: "Ubuntu-Bold";
+}
+
+.bg__content {
+  text-align: center;
+  color: #ffffff;
+}
+
+.bg__content * {
+  margin: 20px;
+}
+
+.container__second {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.title__second {
+  text-align: right;
+  font-family: "Ubuntu-Bold";
+  color: hsl(237, 17%, 21%);
+  margin-bottom: 75px;
+  font-size: 36px;
+}
+
+.container__second__section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title__paragraph {
+  font-family: "Ubuntu-Bold";
+  color: hsl(237, 17%, 21%);
+  margin-bottom: 35px;
+}
+
+.content__paragraph {
+  max-width: 900px;
+  margin-left: 25%;
+}
+
+.content__paragraph p {
+  margin-bottom: 35px;
+}
+
+.image__desktop__right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -180px;
+}
+
+.container__thrid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(237, 17%, 21%);
+  height: 50vh;
+  color: #fff;
+  border-bottom-left-radius: 80px;
+  border-top-right-radius: 80px;
+  position: relative;
+}
+
+.container__thrid div:nth-child(2) {
+  width: 600px;
+}
+
+.container__thrid div:nth-child(2) h2 {
+  margin-bottom: 20px;
+}
+
+.container__fourth {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px;
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container__fourth__section {
+  display: flex;
+  align-items: center;
+}
+
+.title__paragraph__fourth {
+  font-family: "Ubuntu-Bold";
+  color: hsl(237, 17%, 21%);
+  margin-bottom: 35px;
+}
+
+.content__paragraph__fourth {
+  margin-left: 50%;
+}
+
+.content__paragraph__fourth p {
+  margin-bottom: 35px;
+}
+
+.image__desktop__left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) scale(1.2);
+  left: -180px;
+}
+
+.footer {
+  background-color: hsl(240, 10%, 16%);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  border-top-right-radius: 80px;
+}
+
+.footer div {
+  margin: 50px;
+  width: 500px;
+  margin-bottom: 5%;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.footer ul li {
+  font-family: "Ubuntu-Light";
+  margin-bottom: 10px;
+  opacity: 0.5;
+}
+
+.footer h4 {
+  margin-bottom: 20px;
+}
+
+/* Style for responsive */
+
+@media screen and (max-width: 768px) {
+  .menu:first-child {
+    flex-direction: column;
+  }
+
+  .menu:nth-child(2) {
+    margin-bottom: auto;
+  }
+
+  nav {
+    background-color: hsl(13, 100%, 72%);
+  }
+
+  .bg__container {
+    height: 60vh;
+    background-color: hsl(13, 100%, 72%);
+  }
+
+  .bg__container:before {
+    display: none;
+  }
+
+  .container__second {
+    display: block;
+    margin-top: 40px;
+  }
+
+  .title__second {
+    text-align: center;
+  }
+
+  .content__paragraph {
+    margin-left: 0;
+  }
+
+  .image__desktop__right {
+    display: flex;
+    top: 85%;
+    transform: translateY(-85%);
+    left: 0;
+    justify-content: center;
+    width: 400px;
+    margin-left: 20%;
+  }
+
+  .container__second__section {
+    display: block;
+  }
+
+  .container__thrid {
+    display: none;
+  }
+
+  .container__thrid__mobile {
+    background-color: hsl(237, 17%, 21%);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .container__thrid__mobile h2 {
+    margin-bottom: 20px;
+    font-size: 38px;
+  }
+
+  .container__thrid__mobile p {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+
+  .container__fourth__section {
+    flex-direction: column-reverse;
+  }
+
+  .container__fourth__section div {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .content__paragraph__fourth {
+    margin-left: 0;
+  }
+
+  .image__desktop__left {
+    position: relative;
+    top: 0;
+    transform: translateY(0) scale(1);
+    left: 0;
+  }
+}
