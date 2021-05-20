@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap');
 
 //  Reset css
@@ -10,7 +11,7 @@
 
 body {
     font-family: $font-vietnam;
-    padding-top: 60px;
+    // padding-top: 60px;
     // background-color: aqua;
 }
 
@@ -26,6 +27,7 @@ a {
 .button{
     border-radius: 15px;
     padding: 8px 12px;
+    display: inline-block;
     // no anida al .button (ver en el css)
     &-primary{
         background-color: $color-naranja;
@@ -38,6 +40,7 @@ a {
 }
 
 .header{
+    padding: 0 3rem;
     max-width: $max-width;
     margin: 60px auto;
     // background-color: #444;
@@ -56,3 +59,126 @@ a {
     }
 }
 
+.paragraph {
+    line-height: 1.8rem;
+    color: $color-dark-grayish;
+
+}
+
+.main {
+    // padding-top: 6rem;
+}
+
+.hero{
+    @include flex-row();
+    flex-wrap: wrap;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0 3rem;
+    // todos los hijos en primer nivel tengan 50% de ancho
+    > * {
+        width: 50%;
+    }
+    .hero__tittle{
+        margin-bottom: 2rem;
+        h1{
+            font: {
+                size: 3rem;
+                weight: 700;
+            }
+            color: $color-dark-blue;
+            padding-right: 35%;
+            margin-bottom: 2rem;
+        }
+        p {
+            margin-bottom: 2rem;
+            padding-right: 40%;
+        }
+    }
+    .hero__figure {
+        img{
+            max-width: 100%;
+        }
+    }
+
+
+.hero__description {
+    h2 {
+        font: {
+            size: 2rem;
+            weight: 700;
+        }
+        color: $color-dark-blue;
+        margin-bottom: 2rem;
+        padding-right: 3rem;
+    }
+    p {
+        padding-right: 40%;
+    }
+}
+
+.hero__features {
+    .feature {
+        margin-bottom: 1.5rem;
+        .feature__header {
+            @include flex-row (flex-start, center);
+            .feature__number {
+                height: 40px;
+                width: 60px;
+                border: none;
+                background-color: $color-naranja;
+                color: $color-blanco;
+                font-weight: 700;
+                border-radius: 25px;
+                margin-right: 1.5rem;
+            }
+            .feature__tittle {
+                color: $color-dark-blue;
+                font-weight: 700;
+            }
+        }
+        .feature__description{
+            padding-left: calc(60px + 2rem);
+        }
+    }
+}
+}
+
+
+@media screen and (max-width: 750px) {
+    .main{
+        .hero{
+            .hero__tittle{
+                h1{
+                    padding-right: 20%;
+                }
+                p{
+                    padding-right: 20%;
+                }
+            }
+            .hero__description {
+                h2{
+                    padding-right: 2rem;
+                }
+                p{
+                    padding-right: 25%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .main{
+        .hero{
+            .hero__tittle{
+                h1,p{
+                    padding-right: 10%;
+                }                
+            }
+            .hero__description {
+                padding-right: 10%;
+            }
+        }
+    }
+}
