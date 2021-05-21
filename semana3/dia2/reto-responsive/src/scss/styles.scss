@@ -50,11 +50,19 @@ a {
     .header__navigation {
         .header__links {
             display: flex;
-            gap: 2rem;
+            // gap: 2rem;
             a {
                 color: $color-dark-blue;
                 font-weight: 700;
             }
+        }
+    }
+    .header__menu{
+        display: none;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+        &:hover{
+            transform: rotate(360deg) scale(1.3);
         }
     }
 }
@@ -96,8 +104,10 @@ a {
         }
     }
     .hero__figure {
+        @include flex-row(center, center);
         img{
             max-width: 100%;
+            
         }
     }
 
@@ -144,8 +154,56 @@ a {
 }
 }
 
+.comments{
+    .comments__tittle{
+        text-align: center;
+        font: {
+            size: 2rem;
+            weight: 700;
+        }
+    }
+    .comments__wrapper{
+        padding: 0 1rem;
+        @include flex-row();
+        // separacion entre comentarios (hijos)
+        gap: 2rem;
+        margin-top: 6rem;
+        .comment{
+            background-color: $color-light-gray;
+            text-align: center;
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            .comment__figure{
+                height: 80px;
+                width: 80px;
+                margin: 0 auto;               
+                transform: translate(0, -50%);
+                img{
+                    max-width: 100%;                    
+                }
+            }
+            .comment__name{
+                margin-bottom: 1rem;
+                color:$color-dark-blue;
+                font-weight: 700;
+            }
+        }
+    }
+    .comments__action {
+        text-align: center;
+    }
+}
 
-@media screen and (max-width: 750px) {
+.slogan{
+    height: 200px;
+    background-color: $color-naranja;
+    .slogan__message{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (max-width: 1440px) {
     .main{
         .hero{
             .hero__tittle{
@@ -168,7 +226,8 @@ a {
     }
 }
 
-@media screen and (max-width: 650px) {
+
+@media screen and (max-width: 1200px) {
     .main{
         .hero{
             .hero__tittle{
@@ -182,3 +241,122 @@ a {
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    .header{
+        flex-wrap: wrap;
+        .header__menu{
+            display: inline-block;
+            font-size: 1.5rem;
+            color: $color-dark-blue;
+        }
+        .header__navigation {
+            transition: top 0.3s ease-in-out;
+            position: absolute;
+            // los subio encima de la pagina
+            top: -300px;
+            left: 5%;
+            width: 90%;  
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 10px 15px #888;
+            .header__links{
+                flex-direction: column;
+                .header__link{
+                    // background-color: red;
+                    height: 40px;
+                    @include flex-row(center, center);
+                }
+            }          
+        }
+        // el único hijo directo de header
+        >a{
+            // ocultando boton get start
+            display: none;
+        }
+    }
+
+    .header.open{
+        .header__navigation {
+            top: 110px;
+        }
+        
+    }
+
+
+    .main{
+        .hero {
+			.hero__title {
+				h1,
+				p {
+					padding-right: 10%;
+				}
+			}
+			.hero__description {
+				h2,
+				p {
+					padding-right: 10%;
+				}
+			}
+		}
+        .comments{
+            .comments__wrapper{
+                @include flex-column();
+                .comment{
+                    margin-bottom: 2rem;
+                }
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main{
+        .hero{
+            > * {
+                width: 100%;
+            }
+            .hero__figure{
+                order: -1;
+            }
+            .hero__tittle{
+                margin-bottom: 3rem;
+                text-align: center;
+                h1,p {
+                    padding-right: 0;
+                }
+            }
+            .hero__description{
+                margin-bottom: 3rem;
+                text-align: center;
+                h2,p{
+                    padding-right: 0;
+                }
+            }
+            .hero__features{
+                .feature{
+                .feature__header{
+                    .feature__tittle{
+                        position: relative;
+                        z-index: -1;
+                        padding-left: 40px;
+                        left: -30px;
+                        background-color: $color-pale-red;
+                        flex: 1;
+                        height: 40px;
+                        @include flex-row(flex-star, center);
+                    }
+                    .feature__number{
+                        margin-right: 0;
+                    }
+                }
+                .feature__description{
+                    padding-left: 0;
+                }
+                }
+            }
+        }
+    }
+} 

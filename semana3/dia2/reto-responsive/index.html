@@ -13,14 +13,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Document</title>
   </head>
 
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <figure class="header__logo">
         <img src="./src/images/logo.svg" alt="logo app" />
       </figure>
+      <i class="fas fa-bars header__menu" id="menu"></i>
       <nav class="header__navigation">
         <ul class="header__links">
           <li class="header__link"><a href="#">Pricing</a></li>
@@ -91,7 +100,54 @@
         </article>
       </section>
 
-      <section></section>
+      <section class="comments">
+        <h2 class="comments__tittle">What they've said</h2>
+        <div class="comments__wrapper">
+          <div class="comment">
+            <figure class="comment__figure">
+              <img src="./src/images/avatar-ali.png" alt="" />
+            </figure>
+            <h4 class="comment__name">Anisha Li</h4>
+            <p class="comment__text paragraph">
+              “Manage has supercharged our team’s workflow. The ability to
+              maintain visibility on larger milestones at all times keeps
+              everyone motivated.”
+            </p>
+          </div>
+          <div class="comment">
+            <figure class="comment__figure">
+              <img src="./src/images/avatar-ali.png" alt="" />
+            </figure>
+            <h4 class="comment__name">Anisha Li</h4>
+            <p class="comment__text paragraph">
+              “Manage has supercharged our team’s workflow. The ability to
+              maintain visibility on larger milestones at all times keeps
+              everyone motivated.”
+            </p>
+          </div>
+          <div class="comment">
+            <figure class="comment__figure">
+              <img src="./src/images/avatar-ali.png" alt="" />
+            </figure>
+            <h4 class="comment__name">Anisha Li</h4>
+            <p class="comment__text paragraph">
+              “Manage has supercharged our team’s workflow. The ability to
+              maintain visibility on larger milestones at all times keeps
+              everyone motivated.”
+            </p>
+          </div>
+        </div>
+        <div class="comments__action">
+        <a class="button button-primary" href="#">Get Starter</a>
+      </div>
+      </section>
+      <section class="slogan">
+        <div class="slogan__message">
+          <h2>Simplify how your team works today</h2>
+          <a class="button button-secundary" href="#">Get Starter</a>
+        </div>
+      </section>
     </main>
+    <script src="./src/js/index.js"></script>
   </body>
 </html>
