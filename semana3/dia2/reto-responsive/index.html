@@ -21,11 +21,14 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- cdn de aosjs -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
   </head>
 
-  <body>
-    <header class="header" id="header">
+  <body id="body">
+
+    <header class="header">
       <figure class="header__logo">
         <img src="./src/images/logo.svg" alt="logo app" />
       </figure>
@@ -103,7 +106,8 @@
       <section class="comments">
         <h2 class="comments__tittle">What they've said</h2>
         <div class="comments__wrapper">
-          <div class="comment">
+          <div class="comment" data-aos="fade-up"
+          data-aos-duration="1000">
             <figure class="comment__figure">
               <img src="./src/images/avatar-ali.png" alt="" />
             </figure>
@@ -114,7 +118,8 @@
               everyone motivated.”
             </p>
           </div>
-          <div class="comment">
+          <div class="comment" data-aos="fade-up"
+          data-aos-duration="2000">
             <figure class="comment__figure">
               <img src="./src/images/avatar-ali.png" alt="" />
             </figure>
@@ -125,7 +130,8 @@
               everyone motivated.”
             </p>
           </div>
-          <div class="comment">
+          <div class="comment" data-aos="fade-up"
+          data-aos-duration="3000">
             <figure class="comment__figure">
               <img src="./src/images/avatar-ali.png" alt="" />
             </figure>
@@ -148,6 +154,48 @@
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer__wrapper">
+        <div class="footer__social">
+          <figure class="footer__logo">
+            <img src="./src/images/logo-blanco.svg" alt="">
+          </figure>
+          <p class="footer__icons">
+            <i class="fab fa-facebook    "></i>
+            <i class="fab fa-spotify    "></i>
+            <i class="fab fa-twitter    "></i>
+            <i class="fab fa-pinterest    "></i>
+            <i class="fab fa-instagram    "></i>
+          </p>
+        </div>
+
+        <div class="footer__sitemap">
+          <ul class="footer__links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Comunity</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__form">
+          <form action="">
+            <input type="text" placeholder="Updates to you">
+            <button class="button button-primary">Go</button>
+          </form>
+          <small>Copyright 2021 All Rights Reserved</small>
+        </div>
+
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./src/js/index.js"></script>
+
   </body>
+
 </html>

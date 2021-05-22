@@ -1,6 +1,8 @@
-const header = document.getElementById("header");
+const body = document.getElementById("body");
 const menu = document.getElementById("menu");
 
 menu.onclick = () => {
-  header.classList.toggle("open");
+  body.classList.toggle("open");
 }
+
+AOS.init();
