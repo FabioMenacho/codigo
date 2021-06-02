@@ -12,7 +12,7 @@
 let users = [
     {
         id: 1,
-        email: 'george.bluth@reqres.in',
+        email: 'george.bluth@gmail.in',
         first_name: 'George',
         last_name: 'Bluth',
         avatar: 'https://reqres.in/img/faces/1-image.jpg',
@@ -26,7 +26,7 @@ let users = [
     },
     {
         id: 3,
-        email: 'emma.wong@reqres.in',
+        email: 'emma.wong@gmail.in',
         first_name: 'Emma',
         last_name: 'Wong',
         avatar: 'https://reqres.in/img/faces/3-image.jpg',
@@ -62,7 +62,31 @@ let users = [
 //     console.log(`fin de arreglo`);
 // })
 
-users.forEach((usuario, i) => {
-    console.log(`${i} -${usuario.first_name} ${usuario.last_name}`);
-});
 
+// users.forEach((usuario, i) => {
+//     console.log(`${i} -${usuario.first_name} ${usuario.last_name}`);
+// });
+
+
+let gmails = [];
+users.forEach((usuario, i) => {
+    if (usuario.email.indexOf("gmail") >= 0) {
+        gmails.push(usuario);
+    }
+});
+console.log(gmails);
+
+// Con Regex
+let gmailRegex = new RegExp("gmail");
+let rptaRegex = gmailRegex.test("jorge@gmail.com");
+if(rptaRegex===true){
+    console.log("Si es gmail");
+}else{
+    console.log("No es gmail");
+}
+
+if(/gmail/.test("jorge@gmail.com")) {
+    console.log("Si es gmail");
+} else{
+    console.log("No es gmail");
+}

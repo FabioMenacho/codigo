@@ -38,7 +38,7 @@ console.log(arreglo1);
 console.log(arreglo2);
 
 
-// Creando numbres desde su clase primitiva
+// Creando numbers desde su clase primitiva
 
 let edad1 = 29;
 let edad2 = new Number(38);
