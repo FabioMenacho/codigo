@@ -23,11 +23,12 @@ div2.innerHTML = "<a href='www.google.com'>Link a Google</a>"
 // elemento.append(otro_elemento)
 // Agrega un elemento dentro de otro
 // OJO: agrega el elemento al final de los hijos del elemento padre
+
 // 1. Se crea un elemento "strong"
 const textoNegrita = document.createElement("strong");
 textoNegrita.innerText = " Codigo 2021";
 parrafo1.append(textoNegrita);
-
+parrafo1.append(" textoNegrita");
 
 let users = [
     {
@@ -86,10 +87,19 @@ const listaUsuarios = document.querySelector("#lista-usuarios");
 // 2. colocar el nombre y apellido dentro del <li>
 // 3. agregar el <li> al <ul>
 
+listaUsuarios.innerHTML = "<li>Item 1</li> <li>Item 2</li>";
+
+// users.forEach((usuario)=>{
+//     let liTemporal = document.createElement("li");
+//     liTemporal.innerText = `${usuario.first_name} ${usuario.last_name}`;
+//     listaUsuarios.append(liTemporal);
+// });
+
+// Concatenar string e imprimir el único string
+let lisString ="";
 users.forEach((usuario)=>{
-    let liTemporal = document.createElement("li");
-    liTemporal.innerText = `${usuario.first_name} ${usuario.last_name}`;
-    listaUsuarios.append(liTemporal);
+    lisString = lisString + `<li>${usuario.first_name} ${usuario.last_name}</li>`
 });
+listaUsuarios.innerHTML = lisString;
 
 
