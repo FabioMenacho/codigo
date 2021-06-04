@@ -1,4 +1,5 @@
 
+// document.
 // Una de las propiedades más importantes de window, es el objeto "document" que sirve para controlar los elementos internos del DOM
 //  - crear etiquetas
 //  - eliminar etiquetas

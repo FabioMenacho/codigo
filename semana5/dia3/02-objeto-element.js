@@ -62,7 +62,6 @@ let enlaces = [
 // procurar incluir una etiqueta img colocando la imagen del usuario
 let cuerpoTabla = document.getElementById("cuerpo-tabla");
 
-
 const fillTable = () => {
     let filas = "";
     users.forEach((usuario, i) => {
@@ -85,11 +84,11 @@ let navegacion = document.getElementById("navegacion");
 const fillLinks = () => {
     let linksString = "";
     enlaces.forEach((enlace) => {
-    linksString = linksString + `<li>        
+        linksString = linksString + `<li>        
     <a href="${enlace.path}">${enlace.texto}</a> 
     </li>`;
-});
-navegacion.innerHTML = linksString;
+    });
+    navegacion.innerHTML = linksString;
 };
 
 fillLinks();

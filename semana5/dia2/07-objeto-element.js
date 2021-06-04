@@ -3,8 +3,10 @@
 
 //elemento.innerText
 // SET - GET
+
 // texto interno de la etiqueta 
 const parrafo1 = document.querySelector("#parrafo1");
+
 // get: obtengo el texto
 console.log(parrafo1.innerText);
 // set: cambio el texto
@@ -15,6 +17,7 @@ parrafo1.innerText = "Nuevo texto del párrafo"
 
 const div1 = document.getElementById("div1");
 const div2 = document.getElementById("div2");
+
 // seteando innerText
 div1.innerText = "<a href='www.google.com'>Link a Google</a>"
 // seteando con innerHTML
@@ -24,11 +27,13 @@ div2.innerHTML = "<a href='www.google.com'>Link a Google</a>"
 // Agrega un elemento dentro de otro
 // OJO: agrega el elemento al final de los hijos del elemento padre
 
-// 1. Se crea un elemento "strong"
+// Crear un elemento "strong"
 const textoNegrita = document.createElement("strong");
 textoNegrita.innerText = " Codigo 2021";
 parrafo1.append(textoNegrita);
-parrafo1.append(" textoNegrita");
+
+// Aumentar texto al strong
+textoNegrita.append(" agregar texto");
 
 let users = [
     {
@@ -81,13 +86,12 @@ let users = [
     },
 ];
 
-const listaUsuarios = document.querySelector("#lista-usuarios");
 
 // 1. Por cada usuario, crear un <li>
 // 2. colocar el nombre y apellido dentro del <li>
 // 3. agregar el <li> al <ul>
 
-listaUsuarios.innerHTML = "<li>Item 1</li> <li>Item 2</li>";
+const listaUsuarios = document.querySelector("#lista-usuarios");
 
 // users.forEach((usuario)=>{
 //     let liTemporal = document.createElement("li");
@@ -98,8 +102,17 @@ listaUsuarios.innerHTML = "<li>Item 1</li> <li>Item 2</li>";
 // Concatenar string e imprimir el único string
 let lisString ="";
 users.forEach((usuario)=>{
-    lisString = lisString + `<li>${usuario.first_name} ${usuario.last_name}</li>`
+    lisString = lisString + `<li>${usuario.first_name} ${usuario.last_name}</li>`;
 });
 listaUsuarios.innerHTML = lisString;
+
+// Agregar una lista
+for(let i=0; i<2;i++){
+const list = document.createElement("li")
+listaUsuarios.append(list);
+list.innerText = `Item${i+1}`;
+}
+// Reemplazar las listas
+// listaUsuarios.innerHTML = "<li>Item 1</li> <li>Item 2</li>";
 
 

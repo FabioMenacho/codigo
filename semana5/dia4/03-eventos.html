@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .cuadrado {
+        width: 100px;
+        height: 100px;
+        box-shadow: 0px 0px 8px #555 inset;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.google.com" id="linkGoogle">Click Google</a>
+    <div class="cuadrado" id="divCuadrado"></div>
+    <form action="">
+      <fieldset>
+        <legend>Datos personales</legend>
+        <p>
+          <label for="inpuNombre">Nombre</label>
+          <input type="text" placeholder="Ejm: Rox" id="inputNombre" />
+        </p>
+        <p>
+          <label for="selectPais">País</label>
+          <select name="" id="selectPais">
+            <option value="0">-Seleccione Pais-</option>
+          </select>
+        </p>
+        <p>
+          <label for="selectDpto">Departamento:</label>
+          <select name="" id="selectDpto">
+            <option value="0">-Seleccione Dpto-</option>
+          </select>
+        </p>
+        <p>
+          <label for="inputMensaje">Mensaje</label>
+          <textarea placeholder="Ingrese  mensaje" id="inputMensaje" cols="30" rows="10" maxlength="50"></textarea>
+          <br />
+          <small>Quedan <span id="letras">50</span> caracteres</small>
+        </p>
+
+        <button type="button" id="btnProcesar">Procesar Información</button>
+        <button type="button" id="btnValidar">Validar Campos</button>
+      </fieldset>
+    </form>
+
+    <script src="./03-eventos.js"></script>
+  </body>
+</html>

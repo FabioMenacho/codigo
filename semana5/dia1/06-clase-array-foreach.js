@@ -64,7 +64,7 @@ let users = [
 
 
 // users.forEach((usuario, i) => {
-//     console.log(`${i} -${usuario.first_name} ${usuario.last_name}`);
+//     console.log(`${i} ${usuario.first_name} ${usuario.last_name}`);
 // });
 
 

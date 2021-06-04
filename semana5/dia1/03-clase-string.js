@@ -29,13 +29,14 @@ console.log(email.trim());
 console.log(password.trim());
 
 
-// Reemplaza el primer término con el segundo termino en cada lugar donde lo encuentra.
+// Reemplaza el primer término con el segundo termino en cada lugar donde lo encuentra, solo reemplaza el primero que encuentra
 let resultadoReplace = frase.replace("ñ", "ni");
 console.log(resultadoReplace);
 
 let resultadoReplace2 = frase.replace(" ","");
 console.log(resultadoReplace2);
 
+// Reemplaza todos los que encuentra
 let resultadoReplace3 = frase.replace(/\s/g,"");
 console.log(resultadoReplace3);
 

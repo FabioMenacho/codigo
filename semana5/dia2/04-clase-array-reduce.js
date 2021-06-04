@@ -5,7 +5,7 @@
 
 let numeros = [4, 3, 45, 2, 20];
 
-let sumatoriaNumeros = numeros.reduce((sumatoria,elementoActual) => {
+let sumatoriaNumeros = numeros.reduce((sumatoria, elementoActual) => {
     return sumatoria + elementoActual;
 }, 0);
 
@@ -63,4 +63,20 @@ let users = [
 ];
 
 // Hacer la sumatoria de las edades de las personas del arreglo users
+// let edades = [];
+// users.forEach((usuario) => {
+//     edades.push(usuario.age);
+// });
+// let suma = edades.reduce((sumatoria, edad) => {
+//     return sumatoria + edad;
+// }, 0);
+// console.log(`Suma total: ${suma}`);
 
+let edades = users.map((usuario)=>{
+    return usuario.age;
+})
+
+let suma = edades.reduce((sumatoria, edad)=>{
+    return sumatoria + edad;
+},0);
+console.log(`Suma total: ${suma}`);

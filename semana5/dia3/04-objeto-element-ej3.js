@@ -16,12 +16,46 @@ let btnAnterior = document.getElementById("btn-anterior");
 let imagen = document.getElementById("imagen");
 let btnSiguiente = document.getElementById("btn-siguiente");
 
+// let n = 0;
+
+// btnAnterior.onclick = () => {
+//     if (n > 0) {
+//         imagen.setAttribute("src", `${imagenes[n - 1]}`);
+//     } else {
+//         n = 1;
+//     }
+//     n = n - 1;
+// };
+
+// btnSiguiente.onclick = () => {
+//     if (n < imagenes.length-1) {
+//         imagen.setAttribute("src", `${imagenes[n + 1]}`);
+//     } else{
+//         n = imagenes.length-1;
+//     }
+//     n = n + 1;
+// };
+
+// ROXANA PROBAR
 let n = 0;
 
 btnAnterior.onclick = () => {
+    //si la variable inicial está en 0, el boton anterior debe estar bloqueado
+    n--;
+    imagen.setAttribute('src', `${imagenes[n]}`);
 
-};
+    btnSiguiente.removeAttribute("disabled");
+    if (n === 0) {
+        btnAnterior.setAttribute("disabled", true);
+    }
+}
 
 btnSiguiente.onclick = () => {
+    n++;
+    imagen.setAttribute('src', `${imagenes[n]}`);
 
-};
+    btnAnterior.removeAttribute("disabled");
+    if (n === (imagenes.length - 1)) {
+        btnSiguiente.setAttribute("disabled", true);
+    }
+}
