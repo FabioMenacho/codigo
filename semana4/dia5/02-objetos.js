@@ -9,7 +9,8 @@ let cpu = {
 console.log(cpu);
 
 // modificando una característica del objeto
-cpu.ram = 8;
+// cpu.ram = 8;
+cpu["ram"] = 8;
 console.log(cpu);
 
 //

@@ -16,33 +16,33 @@
   <body>
     <a href="https://www.google.com" id="linkGoogle">Click Google</a>
     <div class="cuadrado" id="divCuadrado"></div>
-    <form action="">
+    <form action="" id="formulario">
       <fieldset>
         <legend>Datos personales</legend>
         <p>
           <label for="inpuNombre">Nombre</label>
-          <input type="text" placeholder="Ejm: Rox" id="inputNombre" />
+          <input type="text" name="nombre" placeholder="Ejm: Rox" id="inputNombre" />
         </p>
         <p>
           <label for="selectPais">País</label>
-          <select name="" id="selectPais">
+          <select name="pais" id="selectPais">
             <option value="0">-Seleccione Pais-</option>
           </select>
         </p>
         <p>
           <label for="selectDpto">Departamento:</label>
-          <select name="" id="selectDpto">
+          <select name="Departamento" id="selectDpto">
             <option value="0">-Seleccione Dpto-</option>
           </select>
         </p>
         <p>
           <label for="inputMensaje">Mensaje</label>
-          <textarea placeholder="Ingrese  mensaje" id="inputMensaje" cols="30" rows="10" maxlength="50"></textarea>
+          <textarea placeholder="Ingrese  mensaje" name="mensaje" id="inputMensaje" cols="30" rows="10" maxlength="50"></textarea>
           <br />
           <small>Quedan <span id="letras">50</span> caracteres</small>
         </p>
 
-        <button type="button" id="btnProcesar">Procesar Información</button>
+        <button type="submit" id="btnProcesar">Procesar Información</button>
         <button type="button" id="btnValidar">Validar Campos</button>
       </fieldset>
     </form>

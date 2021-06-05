@@ -6,6 +6,7 @@ let selectDpto = document.getElementById("selectDpto");
 let inputNombre = document.getElementById("inputNombre");
 let inputMensaje = document.getElementById("inputMensaje");
 let letras = document.getElementById("letras");
+let formulario = document.getElementById("formulario");
 
 let paises = [
     { id: 12343, nombre: "Perú", },
@@ -24,6 +25,11 @@ let departamentos = [
     { id: 28, nombre: "Cordova", idPais: 19, stock: false },
     { id: 29, nombre: "Tulum", idPais: 12, stock: true },
 ];
+
+let datos = {
+    nombre: "",
+    mensaje: "",
+};
 
 // Funcion que se ejecuta al inicio 1 sola vez y no se guarda en ninguna variable 
 (() => {
@@ -76,14 +82,25 @@ divCuadrado.onmouseout = (e) => {
     console.log(e);
 }
 
+// No entiendo
+const setData = (e) => {
+    // console.log(e);
+    // console.log(e.target.name);
+    // console.log(e.target.value);
+    datos[e.target.name] = e.target.value;
+};
+
 // Se dispara cuando se suelta la tecla del inputNombre
 inputNombre.onkeyup = (e) => {
+    setData(e);
+    console.log("nombre", e.target.name);
     console.log(inputNombre.value);
 }
 
 // Cada vez que se escriba un nuevo caracter en el textarea deberá restarse de la cuenta máxima de 50 caracteres
 // Cuando la cantidad total llegue a 50 caracteres no deberá escribirse más caracteres
-inputMensaje.onkeyup = () => {
+inputMensaje.onkeyup = (e) => {
+    setData(e);
     let texto = inputMensaje.value;
     let caracteres = texto.length;
     if (caracteres > 50) {
@@ -92,3 +109,32 @@ inputMensaje.onkeyup = () => {
         letras.innerText = 50 - caracteres;
     }
 }
+
+// El boton debe tener el tipo submit
+// Envia y recarga la página
+formulario.onsubmit = (e) => {
+    // para que no cargue la página 
+    e.preventDefault();
+    console.log("Mi submit funciona");
+    console.log(datos);
+    // Siempre que creemos una expresión regular (regexp) tenemos que instanciar a la clase Regexp
+    // new RegExp
+    // como parametros RegExp me pide el conjunto de caracteres que voy a validar y todo eso lo guardamos en una variable llamada regexLetras
+    // Ahora para yo poder utilizar el regex tengo que usar la funcion test
+    // acceo mediante el regexLetras.test(string) y como parametro me pide un string y esta Funcion devuelve true o false
+    const regexLetras = new RegExp("^[a-zA-Zñ]{1,5}$");
+    if (regexLetras.test(datos.nombre)) {
+        if (regexLetras.test(datos.mensaje)) {
+            console.log("Todo ok se hizo el submit");
+        }
+    } else {
+        console.error("Todo mal");
+    }
+
+}
+
+// Para mostrar la data en la consola después de apretar el boton
+// poner el atributo name en input y select
+
+
+
