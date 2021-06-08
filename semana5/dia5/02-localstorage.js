@@ -12,6 +12,7 @@ formulario.onsubmit = (e) => {
     if(inputProducto.value.trim() === "" || inputPrecio.value.trim() ===""){
         // console.log("Error faltan datos");
         // libreria externa sweetalert2 tb se coloca en el HTML
+        // funcion fire para disparar una alerta
         Swal.fire({
             title: 'Error!',
             text: 'Debe llenar todos los campos',
@@ -29,6 +30,10 @@ formulario.onsubmit = (e) => {
         // console.log("Si hay datos");
 
         // No podemos guardar array en el local storage asi que lo transformamos en string
+        console.log(arrayProductos);
+        let arrayProductosString = JSON.stringify(arrayProductos);
+        console.log(arrayProductosString);
+
         localStorage.setItem("productos", JSON.stringify(arrayProductos));   
         
         setTableData();
@@ -47,8 +52,9 @@ const setTableData = () => {
         // Boton
         const btnEliminar = document.createElement("button");
         btnEliminar.innerText = "Eliminar";
+
         btnEliminar.onclick = () => {
-            eliminarProducto();
+            eliminarProducto(posicion);
         }
 
         tdProducto.innerText = `${producto.producto}`;

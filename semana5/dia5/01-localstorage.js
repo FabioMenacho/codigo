@@ -19,6 +19,7 @@ formulario.onsubmit = (e) => {
     // console.log(color);
     setBodyColor(color);
 // entrar a aplicaciones y local storage
+// para guardar (clave,valor) en el local storage
     localStorage.setItem("colorFondo",color);
 };
 

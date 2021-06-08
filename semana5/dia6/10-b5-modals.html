@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="display-1">Ventanas modales en bootstrap</h1>
+
+    <!-- Button trigger modal -->
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Launch demo modal
+    </button>
+
+    <!-- creamos un boton -->
+    <!-- outline hace que se invierta los colores cuando se pasa por encima -->
+    <button class="btn btn-outline-danger" id="btnAbrirModal">
+      Abrir modal!!!
+    </button>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+    <!-- aumentamos el tamañño del modal con la clase modal-xl -->
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- ingresamos el formulario u otra cosa en el body para que se vea cuando presiono una tecla -->
+          <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="" class="form-label">Placa del vehículo</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Ejm: VUH-973"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Fecha y hora</label>
+                  <input
+                    type="datetime-local"
+                    class="form-control"
+                    placeholder="Ejm: VUH-973"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="" class="form-label">Options</label>
+                  <select name="" id="" class="form-select">
+                    <option value="">Opción 1</option>
+                    <option value="">Opción 2</option>
+                    <option value="">Opción 3</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="form-check-label" class="form-check-label"
+                    >Caracerísticas</label
+                  >
+                  <!-- Ponemos check de la libreria de check: https://getbootstrap.com/docs/5.0/forms/checks-radios/ -->
+                  <!-- Si queremos solo que se seleccione 1 es con los circulos (radios) -->
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexCheckDefault">
+                      Default checkbox
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckChecked"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexCheckChecked">
+                      Checked checkbox
+                    </label>
+                  </div>
+                </div>
+                <div>
+                  <label for="form-label">Tipo de vehículo</label>
+                  <!-- Para que los radios se discriminen deben tener el mismo name -->
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault1"
+                    />
+                    <label class="form-check-label" for="flexRadioDefault1">
+                      Camioneta
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="flexRadioDefault"
+                      id="flexRadioDefault2"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexRadioDefault2">
+                      Sedán
+                    </label>
+                  </div>
+                </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      const btnAbrirModal = document.getElementById("btnAbrirModal");
+      const modal = document.getElementById("exampleModal");
+    // funciona el new bootstrap porque se ha "instalado" el script de bootstrap de arriba
+      const miModal = new bootstrap.Modal(modal);
+      btnAbrirModal.onclick = () => {
+        miModal.show();
+      };
+    </script>
+  </body>
+</html>

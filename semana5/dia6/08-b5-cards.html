@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+    <style>
+        .card {
+            cursor: pointer;
+            transition: box-shadow 0.2s ease;
+        }
+    </style>
+    
+  </head>
+  <body>
+    <h1 class="display-1">Cards en bootstrap</h1>
+
+    <main class="container">
+      <div class="row">
+        <div class="col-md-3">
+            <!-- shadow también se peden aplpicar a formularios y otros -->
+          <div class="card shadow">
+            <img
+              src="http://placehold.it/150X150"
+              alt="imagen"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit nesciunt distinctio obcaecati dicta. Asperiores sequi
+                numquam laboriosam nostrum blanditiis reprehenderit ex
+                temporibus totam, ratione adipisci animi distinctio, cumque
+                doloremque. Quos.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow">
+            <div class="card-header">
+              <h5 class="card-title">Cabecera</h5>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit nesciunt distinctio obcaecati dicta. Asperiores sequi
+                numquam laboriosam nostrum blanditiis reprehenderit ex
+                temporibus totam, ratione adipisci animi distinctio, cumque
+                doloremque. Quos.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card shadow">
+            <div class="card-header">
+              <h5 class="card-title">Cabecera</h5>
+            </div>
+            <div class="card-body">
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit nesciunt distinctio obcaecati dicta. Asperiores sequi
+                numquam laboriosam nostrum blanditiis reprehenderit ex
+                temporibus totam, ratione adipisci animi distinctio, cumque
+                doloremque. Quos.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary">Agregar al carrito</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+        // Atrapamos a todos los elementos de la clase card
+        const cards = document.querySelectorAll(".card");
+        // Recorremos a todos los cards para añadirle 2 eventos a cada uno
+        // Las etiquetas cards son HTML elements y tienen forEach pero eso es para array (tener cuidado)
+        cards.forEach((card)=>{
+            card.onmouseover = () => {
+                card.classList.remove("shadow");
+                card.classList.add("shadow-sm");
+            };
+            card.onmouseout = () => {
+                card.classList.remove("shadow-sm");
+                card.classList.add("shadow");
+            };
+        });
+
+    </script>
+  </body>
+</html>

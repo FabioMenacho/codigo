@@ -114,6 +114,7 @@ inputMensaje.onkeyup = (e) => {
 // Envia y recarga la página
 formulario.onsubmit = (e) => {
     // para que no cargue la página 
+    // evita manda la info a action del form
     e.preventDefault();
     console.log("Mi submit funciona");
     console.log(datos);
