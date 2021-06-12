@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Local Storage - 2</title>
+</head>
+
+<body class="mt-5">
+    <div>
+        <h1>Lista de Productos</h1>
+        <form action="" id="formulario">
+            <div>
+                <label for="inputProducto">Ingrese el nombre del producto</label>
+                <input id="inputProducto" class="form-control" type="text" name="producto" placeholder="Ejm: Arroz">
+            </div>
+            <div>
+                <label for="">Ingrese el precio del producto</label>
+                <input id="inputPrecio" class="form-control" type="text" name="precio" placeholder="Ejm: 10">
+            </div>
+            <div>
+                <button class="btn btn-primary" type="submit">Guardar Producto</button>
+            </div>
+        </form>
+        <br>
+        <table class="table table-primary table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- <tr>
+                    <td>Papa</td>
+                    <td>S/ 10</td>
+                    <td><button>Eliminar</button></td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+</body>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./02-localstorage.js"></script>
+
+</html>

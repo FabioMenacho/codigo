@@ -8,7 +8,7 @@ let arrayProductos = [];
 
 formulario.onsubmit = (e) => {
     e.preventDefault();
-
+    // trim elimina los espacios en blanco en ambos extremos 
     if(inputProducto.value.trim() === "" || inputPrecio.value.trim() ===""){
         // console.log("Error faltan datos");
         // libreria externa sweetalert2 tb se coloca en el HTML
@@ -28,9 +28,9 @@ formulario.onsubmit = (e) => {
         
         arrayProductos.push(objetoProducto);
         // console.log("Si hay datos");
-
-        // No podemos guardar array en el local storage asi que lo transformamos en string
         console.log(arrayProductos);
+
+        // No podemos guardar array en el local storage asi que lo transformamos en string     
         let arrayProductosString = JSON.stringify(arrayProductos);
         console.log(arrayProductosString);
 
@@ -41,7 +41,7 @@ formulario.onsubmit = (e) => {
 }
 
 const setTableData = () => {
-    // para limpiar mi tabla
+    // para limpiar mi tabla y que no se dupliquen los productos cuando ingreso los nuevos
     tbody.innerHTML  = "";
 
     arrayProductos.forEach((producto,posicion) =>{
@@ -78,8 +78,8 @@ setTableData();
 };
 
 (()=>{
-    if(localStorage.getItem("producto")){
-        console.log(localStorage.getItems("productos"));
+    if(localStorage.getItem("productos")){
+        console.log(localStorage.getItem("productos"));
         console.log(JSON.parse(localStorage.getItem("productos")));
         arrayProductos = JSON.parse(localStorage.getItem("productos"));
         setTableData();

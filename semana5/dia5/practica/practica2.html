@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Lista de Productos</h1>
+      <form action="" id="formulario">
+        <fieldset>
+          <legend>Productos nuevos</legend>
+          <div>
+            <label for="">Ingrese el nombre del producto</label>
+            <input
+              id="inputProducto"
+              type="text"
+              name="producto"
+              placeholder="Ejm: Arroz"
+            />
+          </div>
+          <div>
+            <label for="">Ingrese el precio del producto</label>
+            <input
+              id="inputPrecio"
+              type="text"
+              name="precio"
+              placeholder="Ejm: 10"
+            />
+          </div>
+          <div>
+            <button type="submit">Guardar Producto</button>
+          </div>
+        </fieldset>
+      </form>
+
+      <form action="">
+        <fieldset>
+          <legend>Productos en stock</legend>
+          <table border="1" cellspacing="3">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </fieldset>
+      </form>
+    </div>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./practica2.js"></script>
+  </body>
+</html>
