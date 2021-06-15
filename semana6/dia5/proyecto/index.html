@@ -11,8 +11,31 @@
       crossorigin="anonymous"
     />
     <title>Document</title>
+    <style>
+      .loading{
+        background-color: rgba(0, 0, 0, 0.9);
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top:0;
+        left: 0;
+        z-index: 1;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        color: white;
+      };
+    </style>
+
   </head>
+  
   <body class="bg-dark">
+
+    <div class="loading" id="loading">
+      Cargando...
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>

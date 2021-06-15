@@ -7,13 +7,17 @@
 
 
 
-// funcion aynceona retorna una promesa
+// funcion asyncrona retorna una promesa
 // cuando una función asyncrona retorna algun valor con la sentencia "return" el valor que devuelve lo hace en una promesa
 
 // const getUsers = async () => {
 //     return 5;
 // };
 
+// devuelve una promesa
+// console.log(getUsers());
+
+// devuelve el valor
 // getUsers().then((data) => {
 //     console.log(data);
 // });
