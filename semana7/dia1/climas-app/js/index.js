@@ -18,6 +18,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoiZmFiaW9tZW5hY2hvbGFuZGEiLCJhIjoiY2tweXJhM3JmMDF2bzJ1bnRzdnIybHA2MiJ9.ZOdJi2YahnXJp3QdmUfFHQ'
 }).addTo(mapa);
 
+
 let marcador = L.marker([0,0]);
 
 const ctx = gebid('myChart').getContext('2d');

@@ -9,3 +9,16 @@
 	background-position: calc(100% - 50px) center;
   background-size: 40px 40px;
 }
+
+.icono-clima{
+	max-width: 100px;
+}
+
+#mapid { 
+	height: 180px; 
+}
+
+.cards__container {
+	max-height: 500px;
+	overflow-y: scroll;
+}
