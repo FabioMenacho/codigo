@@ -1,6 +1,5 @@
 // console.log("HOLA NODE, ahora soy un proyecto");
 
-// llamada a la libreria axios
 const axios = require ("axios").default;
 // console.log(axios);
 
@@ -10,5 +9,3 @@ axios.get('https://60c17d114f7e880017dbfad0.mockapi.io/categorias')
     // handle success
     console.log(rpta.data);
   })
-
-  
