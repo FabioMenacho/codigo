@@ -1,20 +1,21 @@
 import React from 'react'
 
-const Receta = () => {
+const Receta = (props) => {
 
-    let cebiche = {
-        nombre: "Cebiche",
-        ingredientes: ["Pescado", "Limón","Cebolla"],
-      };
+    // let cebiche = {
+    //     nombre: "Cebiche",
+    //     ingredientes: ["Pescado", "Limón","Cebolla"],
+    //   };
       
     return (
         <section>
-          <h2>{cebiche.nombre}</h2>
-          <p>Ingredientes:</p>
+          <h2>{props.plato.nombre}</h2>
+          <p className="texto-rojo">Ingredientes:</p>
           <ul>
             {
-            cebiche.ingredientes.map((ingrediente)=>{
-            return <li>{ingrediente}</li>;
+              // los ingredientes se pueden repetir asi que le ponemos la variable i del contador
+            props.plato.ingredientes.map((ingrediente,i)=>{
+            return <li key={i}>{ingrediente}</li>;
             })
             }
           </ul>

@@ -1,11 +1,8 @@
 import React from 'react'
-import "./styles/header.css"
 
-// recibo el props 
-const Header = (props) => {     
-
+const Header = (props) => {
     return (
-        <header className="sombra">
+        <header>
             {props.texto} - {props.fecha}
         </header>
     )
