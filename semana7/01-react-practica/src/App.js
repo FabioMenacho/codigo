@@ -1,21 +1,18 @@
-import React from 'react';
-import Footer from "./Footer";
-import Receta from './Receta';
-import Header from './Header';
+import React from "react";
+import Contador from "./components/Contador";
+import Aleatorio from "./components/Aleatorio";
+import AleatorioArreglo from "./components/AleatorioArreglo";
 
 const App = () => {
-
-  let titulo = <h1>Recetas</h1>;
-
+  
   return (
     <div>
-      <Header texto="Platos" fecha="18/06/2021"/>
+      <Contador />
       <hr />
-      <main>
-        {titulo}
-        <Receta />
-      </main>
-      <Footer />
+      <Aleatorio min={20} max={60} />
+      <hr />
+      <AleatorioArreglo min={100} max={120} />
+
     </div>
   );
 };
