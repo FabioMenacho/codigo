@@ -9,7 +9,7 @@ const Usuarios = () => {
     useEffect(() => {
         console.log("Inicio useeffect");
         // Es un hook que evita que una porción de código sea ejecutada más de una vez independientemente de las actualizaciones de las variables de estado
-        // Para hacer que e fetch se haga 1 sola vez
+        // Para hacer que el fetch se haga 1 sola vez
         getUsuarios().then(users =>{
             setUsuarios(users);
         })

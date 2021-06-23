@@ -9,7 +9,7 @@ const Contador = () => {
     const [numero, setNumero] = useState(0);
 
     // Crear un tercer boton para resetear el valor del numero a cero
-    const clickReset = () => {
+    const clickReset = () => {        
         setNumero(0);
     };
 
@@ -23,6 +23,7 @@ const Contador = () => {
 
     return (
         <div>
+            {console.log("Inicio return")}
             <button onClick={clickRestar}>-1</button>
             <span>{numero}</span>
             <button onClick={clickSumar}>+1</button>
