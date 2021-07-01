@@ -1,0 +1,51 @@
+*{
+    margin:0;
+    box-sizing:border-box;
+    padding:0;
+    }
+    
+    .header{
+        height: 160px;
+        border: 1px solid black;
+        display: flex;
+        padding: 0 2rem;
+        align-items: center;
+    }
+    
+    .header__nav{
+        height: 160px;
+        flex: 1;
+        background-color: cyan;
+    }
+    
+    .header__cart{
+        /* background-color: brown; */
+    }
+    
+    .header__links{
+        /* background-color: crimson; */
+        display: flex;
+        justify-content: center;
+        /* quitarle las viñetas a los li */
+        list-style: none;
+        /* gap: define un espacio entre elemento y elemento en el eje principal entre hijos */
+        gap: 2rem;
+    }
+
+    .cuadrado-amarillo {
+        height: 150px;
+        width: 150px;
+        border: 1px solid yellow;
+        background-color: black;
+        position: relative;
+        /* top: 10px; */
+      }
+      
+      .cuadrado-rosa {
+        height: 150px;
+        width: 150px;
+        border: 1px solid pink;
+        background-color: blue;
+        position: relative;
+        /* left: calc(50% - 75px); */
+      }

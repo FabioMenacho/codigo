@@ -1,10 +1,35 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { getProductos } from '../services/productos';
+import CardProducto from '../components/CardProducto';
+import Cargando from '../components/Cargando';
 
 const Productos = () => {
+
+    const [productos, setProductos] = useState([]);
+    const [cargando, setCargando] = useState(true);
+
+    useEffect(() => {
+        getProductos().then(response => {
+            console.log(response.data);
+            setProductos(response.data);
+            setCargando(false);
+        })
+
+    }, [])
+
     return (
-        <div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo nobis provident alias asperiores soluta temporibus nemo assumenda magni, totam neque quod maxime repellat a officia possimus similique quidem dolorum dicta.
-        </div>
+        <>
+            <div className="row">
+
+                {
+                    cargando === true ?
+                        <Cargando/> :
+                        productos.map((objProducto) => {
+                            return <CardProducto objProducto={objProducto} key={objProducto.id} />
+                        })
+                }
+            </div>
+        </>
     )
 }
 

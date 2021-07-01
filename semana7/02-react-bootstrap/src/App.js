@@ -9,16 +9,19 @@ const App = () => {
   return (
     <>
       <Header />
+
+
+
       <main className="container">
         <div className="row">
-          <div className="col-12">
-            <h1 className="display-3">Noticias App</h1>
-          </div>
+
+          <h1 className="display-3">Noticias App</h1>
         </div>
+
         <section className="row">
-          
+
           {
-            noticias.map((objNoticia,i)=>{
+            noticias.map((objNoticia, i) => {
               // noti es una props
               return <Noticia key={i} noti={objNoticia} />
             })

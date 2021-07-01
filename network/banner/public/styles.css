@@ -1,0 +1,113 @@
+:root {
+    --color-fondo: rgb(15, 14, 19);
+    --color-cards: rgb(26, 28, 32);
+    --color-buscar: rgb(53, 57, 60);
+    --color-iconos: #A09FA2;
+    --color-letras: rgb(255, 255, 255);
+    --color-azul: #1778F2;
+    --color-verde: #169059;
+}
+
+.icons{
+    font-size: 1.2rem;
+}
+
+.hr {
+    height: 1px;
+    background-color:white;
+    margin: 0;
+  }
+
+.bg-fondo{
+background-color: var(--color-fondo);
+}
+
+.bg-cards{
+    background-color: var(--color-cards);
+    }
+
+.border1{
+    border-radius: 20px;
+}
+
+
+.color-green{
+    color: #169059;
+}
+
+.input-busqueda {
+    /* min-height: 60px; */
+    border-radius: 20px;
+    /* padding-left: 3rem; */
+    /* padding-right: 3rem; */
+    /* font-size: 2rem; */
+    background-image: url("./../src/assets/search.svg");
+    /* background-repeat: no-repeat; */
+    /* background-position: calc(100% - 50px) center; */
+    /* background-size: 40px 40px; */
+}
+
+.card1{
+   max-height: 60px; 
+}
+
+.circulo-verde {
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--color-verde);
+    border-radius: 50%;
+    position: relative;
+    left: 1rem;
+    top: 20px;
+    margin-right: 10px;
+    /* overflow: hidden; */
+}
+
+.circulo-azul {
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--color-azul);
+    border-radius: 50%;
+    position: relative;
+    left: 1rem;
+    top: 11px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+.cuadrado {
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--color-azul);
+    position: relative;
+    left: 1rem;
+    top: 11px;
+    margin-right: 20px;
+    /* overflow: hidden; */
+}
+
+.cuadrado2 {
+    height: 110px;
+    width: 110px;
+    border: 2px solid var(--color-azul);
+    /* position: relative;
+    left: 1rem;
+    top: 11px; */
+    /* margin-right: 3px; */
+    /* overflow: hidden; */
+}
+
+.cuadrado3 {
+    height: 200px;
+    width: 150px;
+    border: 2px solid var(--color-azul);
+    /* position: relative;
+    left: 1rem;
+    top: 11px; */
+    /* margin-right: 3px; */
+    /* overflow: hidden; */
+}
+
+.hijo-1{
+    /* height: 100%; */
+    margin-top: 10px;
+}

@@ -5,6 +5,8 @@ import Carrito from "./pages/Carrito";
 import Productos from "./pages/Productos";
 
 function App() {
+  // Estados globales: Context y Redux
+
   return (
     <div>
       <Router>
