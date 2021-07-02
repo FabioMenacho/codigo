@@ -1,5 +1,6 @@
 import React,{useRef} from 'react'
 import { useDispatch } from 'react-redux';
+import { MODIFICAR_MENSAJE } from '../types/types';
 
 const Formulario = () => {
     const refMensaje = useRef();
@@ -8,7 +9,7 @@ const Formulario = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         dispatch({
-            type: "MODIFICAR_MENSAJE",
+            type: MODIFICAR_MENSAJE,
             payload:{
                 mensaje:refMensaje.current.value
             }

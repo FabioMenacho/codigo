@@ -15,7 +15,7 @@ const Headerb5 = () => {
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="!#">Home</a>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item" activeClassName={"text-primary"}>
                   <a className="nav-link" href="!#">Link</a>
                 </li>
                 <li className="nav-item dropdown">

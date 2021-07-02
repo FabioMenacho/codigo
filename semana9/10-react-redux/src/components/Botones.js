@@ -1,5 +1,9 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
+import { RESTAR_DINERO } from '../types/types';
+import { AGREGAR_DINERO } from '../types/types';
+import { sumarBalance } from '../actions/balanceAction';
+import { restarBalance } from '../actions/balanceAction';
 
 const Botones = () => {
     // para controlar todos los reducers usamos el useDispatch
@@ -7,24 +11,12 @@ const Botones = () => {
 
     const agregar10lucas = () => {
         // este es el action
-        dispatch({
-            type:"AGREGAR_DINERO",
-            payload: {
-                monto: 10,
-                mensaje: "Agregando 10 soles"
-            }
-        })
+        dispatch(sumarBalance(10));
     }
 
     const restar10lucas = () => {
         // este es el action
-        dispatch({
-            type:"RESTAR_DINERO",
-            payload: {
-                monto: 10,
-                mensaje: "Restando 10 soles"
-            }
-        })
+        dispatch(restarBalance(10));
     }
 
     return (

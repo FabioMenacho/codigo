@@ -8,8 +8,17 @@
     --color-verde: #169059;
 }
 
+.margin1{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
 .icons{
     font-size: 1.2rem;
+}
+
+.ancho1{
+    min-width: 100vh;
 }
 
 .hr {
@@ -24,7 +33,7 @@ background-color: var(--color-fondo);
 
 .bg-cards{
     background-color: var(--color-cards);
-    }
+}
 
 .border1{
     border-radius: 20px;
@@ -59,6 +68,30 @@ background-color: var(--color-fondo);
     position: relative;
     left: 1rem;
     top: 20px;
+    margin-right: 10px;
+    /* overflow: hidden; */
+}
+
+.circulo-verde-2 {
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--color-verde);
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+    top: 8px;
+    margin-right: 10px;
+    /* overflow: hidden; */
+}
+
+.circulo-verde-3 {
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--color-verde);
+    border-radius: 50%;
+    position: relative;
+    left: 1rem;
+    top: 30px;
     margin-right: 10px;
     /* overflow: hidden; */
 }
@@ -107,6 +140,16 @@ background-color: var(--color-fondo);
     /* overflow: hidden; */
 }
 
+.cuadrado4 {
+    height: 500px;
+    width: 500px;
+    border: 2px solid var(--color-azul);
+    /* position: relative;
+    left: 1rem;
+    top: 11px; */
+    /* margin: center; */
+    /* overflow: hidden; */
+}
 .hijo-1{
     /* height: 100%; */
     margin-top: 10px;

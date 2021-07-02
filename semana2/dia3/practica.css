@@ -14,7 +14,7 @@
     
     .header__nav{
         height: 160px;
-        flex: 1;
+        /* flex: 1; */
         background-color: cyan;
     }
     
@@ -47,5 +47,23 @@
         border: 1px solid pink;
         background-color: blue;
         position: relative;
+        /* left: calc(50% - 75px); */
+      }
+
+    .cuadrado-amarillo2 {
+        height: 150px;
+        width: 150px;
+        border: 1px solid yellow;
+        background-color: black;
+        /* position: relative; */
+        /* top: 10px; */
+      }
+      
+      .cuadrado-rosa2 {
+        height: 150px;
+        width: 150px;
+        border: 1px solid pink;
+        background-color: blue;
+        /* position: relative; */
         /* left: calc(50% - 75px); */
       }

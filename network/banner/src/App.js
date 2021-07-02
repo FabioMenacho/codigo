@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
+// import Headerb5 from "./components/Headerb5"
 import SideBarLeft from "./components/SideBarLeft";
 import SideBarRight from "./components/SideBarRight";
 import Central from "./components/Central";
@@ -7,8 +8,8 @@ import Central from "./components/Central";
 function App() {
   return (
     <main>
-      <Header />
-      <hr className="hr"/>
+      <Header />      
+      {/* <Headerb5/> */}
       <div className="container-fluid">
         <div className="row">
           <div className="col-3 bg-fondo">            
