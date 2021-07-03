@@ -1,4 +1,5 @@
 import { AGREGAR_PRODUCTO } from "../types/types";
+import { ELIMINAR_PRODUCTO } from "../types/types";
 
 const initialState = {
     productos: [],
@@ -7,6 +8,7 @@ const initialState = {
 
 // se comunica con distpatch y manda el objeto action con type y payload
 export const carritoReducer = (state=initialState, action) => {
+    console.log(state);
     switch (action.type) {
         case AGREGAR_PRODUCTO:
 
@@ -35,7 +37,22 @@ export const carritoReducer = (state=initialState, action) => {
                 // Recorrer los produtos de la copiaProductos final, con la función reduce para obtener el total
                 total: montoTotal
             }
-            break;
+            
+        case ELIMINAR_PRODUCTO:
+            // copiaProductos es un arreglo
+            let copiaProductos2 = [...state.productos];
+            copiaProductos2 = copiaProductos2.filter((objProducto)=>(objProducto.id !== action.payload.id));
+
+            let montoTotal2 = copiaProductos2.reduce((sumatoria, objProducto) =>{
+                return objProducto.precio*objProducto.cantidad+sumatoria;
+              },0);
+
+
+            return {
+                ...state,
+                productos: copiaProductos2,
+                total: montoTotal2
+            }
     
         default:
             return state;

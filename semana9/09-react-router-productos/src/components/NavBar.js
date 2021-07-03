@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import {Link} from "react-router-dom"
 
 const NavBar = () => {
 // Para atrapar el carrito
@@ -19,7 +20,8 @@ const NavBar = () => {
                   <div class="container-fluid">
                     <div class="row w-100">
                       <div className="col text-end">
-                        <button className="btn btn-success">Carrito ({carrito.productos.length})</button>
+                        {/* cambiamos button x Link para pasar a la pag carrito */}
+                        <Link className="btn btn-success" to={"/carrito"}>Carrito ({carrito.productos.length})</Link>
                       </div>
                     </div>
                   </div>

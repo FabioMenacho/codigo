@@ -1,4 +1,4 @@
-import { AGREGAR_PRODUCTO } from "../types/types";
+import { AGREGAR_PRODUCTO, ELIMINAR_PRODUCTO } from "../types/types";
 
 export const agregarProductoAlCarrito = (objProducto) => {
     return {
@@ -6,3 +6,10 @@ export const agregarProductoAlCarrito = (objProducto) => {
         payload: objProducto        
     }
 };
+
+export const eliminarProductoDelCarrito = (objProducto) => {
+    return {
+        type: ELIMINAR_PRODUCTO,
+        payload: objProducto
+    }
+}

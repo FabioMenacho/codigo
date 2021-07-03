@@ -1,6 +1,15 @@
 import React from 'react'
+import {useDispatch} from "react-redux"
+import { eliminarProductoDelCarrito } from '../redux/actions/carritoActions';
 
 const CardProductoItem = ({objProducto}) => {
+    const dispatch = useDispatch();
+
+    const eliminarProducto = () => {
+        dispatch(eliminarProductoDelCarrito(objProducto));
+    }
+
+
     return (
         <div className="card mb-3 shadow border-0">
                     <div className="card-body d-flex justify-content-between">
@@ -18,7 +27,7 @@ const CardProductoItem = ({objProducto}) => {
                             <strong>S/. {(objProducto.cantidad*objProducto.precio).toFixed(2)}</strong>
                         </div>
                         <div className="d-flex align-items-center justify-content-center">
-                            <strong className="btn btn-danger">Eliminar</strong>
+                            <strong className="btn btn-danger" onClick={eliminarProducto}>Eliminar</strong>
                         </div>
                     </div>
                 </div>
