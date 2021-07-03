@@ -1,9 +1,11 @@
 import React from 'react'
-import {useDispatch} from "react-redux"
+import {useDispatch, useSelector} from "react-redux"
 import { eliminarProductoDelCarrito } from '../redux/actions/carritoActions';
 
 const CardProductoItem = ({objProducto}) => {
     const dispatch = useDispatch();
+    // viene del dispatch
+    const categoriaState= useSelector((state)=>state.categoria)
 
     const eliminarProducto = () => {
         dispatch(eliminarProductoDelCarrito(objProducto));
@@ -18,7 +20,9 @@ const CardProductoItem = ({objProducto}) => {
                         </figure>
                         <div className="d-flex flex-column">
                             <h2>{objProducto.nombre}</h2>
-                            <p>{objProducto.descripcion.substring(0,15)}...</p>
+                            {/* <p>{objProducto.descripcion.substring(0,15)}...</p> */}
+                            {/* se ve en la pantalla redux y retorna el objeto categoria.nombre*/}
+                            <p>{categoriaState.categorias.find((objCategoria)=> +objProducto.categoria_id === +objCategoria.id).nombre}</p>
                         </div>
                         <div className="d-flex align-items-center justify-content-center">
                             <strong>{objProducto.cantidad}</strong>
