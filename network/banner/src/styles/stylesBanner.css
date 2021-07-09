@@ -1,0 +1,40 @@
+:root {
+    --color-fondo: rgb(15, 14, 19);
+    --color-cards: rgb(26, 28, 32);
+    --color-buscar: rgb(53, 57, 60);
+    --color-iconos: #A09FA2;
+    --color-letras: rgb(255, 255, 255);
+    --color-azul: #1778F2;
+    --color-verde: #169059;
+}
+
+.margin1{
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+.icons{
+    font-size: 1.2rem;
+}
+
+.hr {
+    height: 1px;
+    background-color:white;
+    margin: 0;
+  }
+
+.bg-fondo{
+background-color: var(--color-fondo);
+}
+
+.bg-cards{
+    background-color: var(--color-cards);
+}
+
+.border1{
+    border-radius: 20px;
+}
+
+
+
+

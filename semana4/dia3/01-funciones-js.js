@@ -1,28 +1,28 @@
 // Funciones
 // porciones de código disponible para ejecutarlas en cualquier momento
 
-// function tablaDeMultiplicar(n=3, limite=7){
-//     console.log(`*********TABLA DEL ${n}***********`);
-//     for(let i=0; i<limite; i++){
-//         console.log(`${n} x ${i} = ${i*n}`);
-//     }
-// }
+function tablaDeMultiplicar(n=3, limite=7){
+    console.log(`*********TABLA DEL ${n}***********`);
+    for(let i=0; i<limite; i++){
+        console.log(`${n} x ${i} = ${i*n}`);
+    }
+}
 
-// tablaDeMultiplicar(4,3);
+tablaDeMultiplicar(4,3);
 // tablaDeMultiplicar(5);
 // tablaDeMultiplicar();
 
-// function factorial(n) {
-//     let total = 1;
-//     for(let i=n; i>0; i--){
-//         total=total*i;
-//     }
-//     return total;
-// }
+function factorial(n) {
+    let total = 1;
+    for(let i=n; i>0; i--){
+        total=total*i;
+    }
+    return total;
+}
 
-// let fact5 = factorial(5);
+let fact5 = factorial(5);
 
-// console.log(`El factorial de 5 es ${fact5}`);
+console.log(`El factorial de 5 es ${fact5}`);
 
 // function sumar(a,b){
 //     return a+b;

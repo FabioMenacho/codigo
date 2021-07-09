@@ -4,7 +4,20 @@ import search from "./../assets/search.svg"
 const SideBarLeft = () => {
     return (
         <>
-            <div className="container-fluid">
+            <div className="container-fluid border1 mt-3 bg-cards py-1">
+                <div className="d-flex align-items-center py-3">
+                    <div className="d-flex">
+                        <figure className="d-flex align-items-center my-auto rounded-circle">
+                            <img src={search} alt="" className="my-auto rounded-circle border border-success border-2" style={{ maxHeight: "40px" }} />
+                        </figure>
+                    </div>
+                    <div className="d-flex my-auto align-items-center ms-2">
+                        <p className="text-light my-auto"> <strong>Fabio Menacho Landa</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            {/* <div className="container-fluid">
                 <div className="card border1 mt-3 bg-cards ">
                     <div className="d-flex flex-row flex-wrap">
                         <figure className="circulo-verde">
@@ -15,63 +28,90 @@ const SideBarLeft = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
-            <div className="container-fluid">
-                <div className="card border1 mt-3 bg-cards ">
-                    <h5 className="text-light ms-3">Socios</h5>
-                    <div className="d-flex flex-row flex-wrap">
-                        <figure className="cuadrado">
-                            <img src={search} alt="" className="img-fluid" />
-                        </figure>
-                        <div className="card-body">
-                            <p className="text-light">Fabio Menacho Landa</p>
+            <div className="container-fluid border1 mt-3 bg-cards">
+                <div className="row">
+                    <div className="d-flex justify-content-between p-2">
+                        <h5 className="text-light my-auto">Socios</h5>
+                        <p className="text-light my-auto">Ver más...</p>
+                    </div>
+                </div>
+                <div className="row my-3">
+                    <div className="d-flex mb-3">
+                        <div className="d-flex">
+                            <figure className="d-flex justify-content-center align-items-center my-auto">
+                                <img src={search} alt="" className="my-auto border border-primary border-2" style={{ maxHeight: "40px" }} />
+                            </figure>
+                        </div>
+                        <div className="col-md-10 my-auto align-items-center ms-2">
+                            <p className="text-light my-auto">Fabio Menacho Landa</p>
                         </div>
                     </div>
-                    <div className="d-flex flex-row flex-wrap">
-                        <figure className="cuadrado">
-                            <img src={search} alt="" className="img-fluid" />
-                        </figure>
-                        <div className="card-body">
-                            <p className="text-light">Fabio Menacho Landa</p>
+                    <div className="d-flex mb-3">
+                        <div className="d-flex">
+                            <figure className="d-flex justify-content-center align-items-center my-auto">
+                                <img src={search} alt="" className="my-auto border border-primary border-2" style={{ maxHeight: "40px" }} />
+                            </figure>
+                        </div>
+                        <div className="col-md-10 my-auto align-items-center ms-2">
+                            <p className="text-light my-auto">Fabio Menacho Landa</p>
                         </div>
                     </div>
-                    <div className="d-flex flex-row flex-wrap">
-                        <figure className="cuadrado">
-                            <img src={search} alt="" className="img-fluid" />
-                        </figure>
-                        <div className="card-body">
-                            <p className="text-light">Fabio Menacho Landa</p>
+                    <div className="d-flex mb-3">
+                        <div className="d-flex">
+                            <figure className="d-flex justify-content-center align-items-center my-auto">
+                                <img src={search} alt="" className="my-auto border border-primary border-2" style={{ maxHeight: "40px" }} />
+                            </figure>
+                        </div>
+                        <div className="col-md-10 my-auto align-items-center ms-2">
+                            <p className="text-light my-auto">Fabio Menacho Landa</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="container-fluid">
-                <div className="card border1 mt-3 bg-cards ">
-                    <h5 className="text-light ms-3">Recién visto</h5>
-                    <div className="d-flex flex-row justify-content-around flex-wrap">
-                        <figure className="cuadrado2">
-                            <img src={search} alt="" className="img-fluid" />
+            <div className="container-fluid border1 mt-3 bg-cards">
+                <div className="row">
+                    <div className="d-flex justify-content-between p-2">
+                        <h5 className="text-light my-auto">Recién vistos</h5>
+                        <p className="text-light my-auto">Ver más...</p>
+                    </div>
+                </div>
+                <div className="row pt-1">
+                    <div className="col-lg-6">
+                        <figure>
+                            <img src={search} alt="" className="my-auto border border-primary border-2 border1 img-fluid" style={{ maxHeight: "100px" }} />
                         </figure>
-                        <figure className="cuadrado2">
-                            <img src={search} alt="" className="img-fluid" />
+                    </div>
+                    <div className="col-lg-6">
+                        <figure>
+                            <img src={search} alt="" className="my-auto border border-primary border-2 border1 img-fluid" style={{ maxHeight: "100px" }} />
                         </figure>
-                        <figure className="cuadrado2">
-                            <img src={search} alt="" className="img-fluid" />
+                    </div>
+                    <div className="col-lg-6">
+                        <figure>
+                            <img src={search} alt="" className="my-auto border border-primary border-2 border1 img-fluid" style={{ maxHeight: "100px" }} />
                         </figure>
-                        <figure className="cuadrado2">
-                            <img src={search} alt="" className="img-fluid" />
+                    </div>
+                    <div className="col-lg-6">
+                        <figure>
+                            <img src={search} alt="" className="my-auto border border-primary border-2 border1 img-fluid" style={{ maxHeight: "100px" }} />
                         </figure>
-                        <figure className="cuadrado2">
-                            <img src={search} alt="" className="img-fluid" />
+                    </div>
+                    <div className="col-lg-6">
+                        <figure>
+                            <img src={search} alt="" className="my-auto border border-primary border-2 border1 img-fluid" style={{ maxHeight: "100px" }} />
                         </figure>
-                        <figure className="cuadrado2">
-                            <img src={search} alt="" className="img-fluid" />
+                    </div>
+                    <div className="col-lg-6">
+                        <figure>
+                            <img src={search} alt="" className="my-auto border border-primary border-2 border1 img-fluid" style={{ maxHeight: "100px" }} />
                         </figure>
                     </div>
                 </div>
             </div>
+
         </>
     )
 }
