@@ -1,18 +1,33 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { agregarPlatoAction } from '../../../redux/actions/pedidoAction';
 
-const PosPlato = () => {
+const PosPlato = ({objPlato}) => {
+
+    const dispatch = useDispatch();
+    const {idMesaSeleccionada} = useSelector((state)=>state.mesa)
+
+    const handleAgregarPlato = () => {
+        if(idMesaSeleccionada !== -1){
+            dispatch(agregarPlatoAction(objPlato, idMesaSeleccionada));
+        } else{
+            // to do: lanzar notificacion de error de warning para el cliente
+        }
+        
+    }
+
     return (
         <div className="carta__plato">
             <img
-                src="https://static.wixstatic.com/media/b3bc8c_e55132dac2f94941b8d0deeb56e04838~mv2.png/v1/fill/w_275,h_183,al_c,lg_1,q_90/b3bc8c_e55132dac2f94941b8d0deeb56e04838~mv2.webp"
+                src={objPlato.plato_img}
                 alt="" />
-            <h4 className="carta__titulo">Arroz Chaufa de Pollo</h4>
-            <span className="carta__precio">S/ 52.00</span>
+            <h4 className="carta__titulo">{objPlato.plato_nom}</h4>
+            <span className="carta__precio">S/. {objPlato.plato_pre}</span>
             <div className="carta__botones">
                 <button className="boton boton-outline-primary boton-restar">
                     -1
                 </button>
-                <button className="boton boton-outline-primary boton-sumar">
+                <button className="boton boton-outline-primary boton-sumar" onClick={handleAgregarPlato}>
                     +1
                 </button>
             </div>
