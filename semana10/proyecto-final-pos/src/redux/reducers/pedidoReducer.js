@@ -1,4 +1,4 @@
-import { AGREGAR_PLATO_A_PEDIDO } from "../types/types";
+import { AGREGAR_PLATO_A_PEDIDO, ELIMINAR_PEDIDO } from "../types/types";
 
 const initialState = {
     pedidos: []
@@ -68,7 +68,12 @@ export const pedidoReducer = (state=initialState, action) => {
                 pedidos:pedidosState
             }
 
-            
+        case ELIMINAR_PEDIDO:
+            let copiaPedidos = [...state.pedidos];copiaPedidos = copiaPedidos.filter((objPedido)=> objPedido.mesaId !== action.payload);
+            return{
+                ...state,
+                pedidos:copiaPedidos
+            } 
         
     
         default:

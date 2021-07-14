@@ -1,7 +1,48 @@
-import React from 'react'
-import { Modal, Button } from "react-bootstrap"
+import React, { useState } from 'react'
+import { Modal } from "react-bootstrap"
+import { useSelector, useDispatch } from 'react-redux'
+import { eliminarPedidoPorMesaIdAction } from '../../../redux/actions/pedidoAction';
+import { postPagarPedido } from '../../../services/pedidoService';
+import Swal from "sweetalert2"
 
 const PosModalBoleta = ({ mostrar, setMostrar }) => {
+    const dispatch = useDispatch();
+    const [cargandoPago, setCargandoPago] = useState(false);
+    const { pedidos } = useSelector((state) => state.pedido);
+    const { idMesaSeleccionada } = useSelector((state) => state.mesa);
+    const objPedidoActual = pedidos.find((objPedido) => objPedido.mesaId === idMesaSeleccionada);
+
+    let total = 0;
+    if(objPedidoActual) {
+        total = objPedidoActual.platos.reduce((prev, objPlatoPedido)=>{
+            return prev + (+objPlatoPedido.cantidad * objPlatoPedido.plato_pre)
+        },0)
+    }
+
+    const handlePagar = () => {
+        if(objPedidoActual){
+            setCargandoPago(true);
+            // este servicio es asyncrono asi que devuelve una promesa y lo atrapo con then
+            postPagarPedido(objPedidoActual, idMesaSeleccionada).then(response=>{
+                if(response.ok){
+                    // limpiar el pedido que acaba de ser pagado
+                    dispatch(eliminarPedidoPorMesaIdAction(idMesaSeleccionada));
+                    // cerrar el modal con el controlador
+                    setMostrar(false)
+                    // lanzar una notificación de éxito
+                    Swal.fire({
+                        icon: "success",
+                        title: "Éxito!",
+                        text: "Pedido pagado con éxito"
+                    })
+                }
+                
+                console.log(response)
+                setCargandoPago(false)
+            })
+        } 
+    }
+
     return (
         // show se muestra cuando esta true
         // no tengo el handleClose por eso lo saco
@@ -15,23 +56,7 @@ const PosModalBoleta = ({ mostrar, setMostrar }) => {
                     <div className="col-md-12">
                         <div className="invoice">
                             <div className="invoice-company text-inverse f-w-600">
-                                <span className="pull-right hidden-print">
-                                    <a
-                                        href="javascript:;"
-                                        className="btn btn-sm btn-white m-b-10 p-l-5"
-                                    >
-                                        <i className="fa fa-file t-plus-1 text-danger fa-fw fa-lg"></i>{' '}
-                                        Export as PDF
-                                    </a>
-                                    <a
-                                        href="javascript:;"
-                                        onclick="window.print()"
-                                        className="btn btn-sm btn-white m-b-10 p-l-5"
-                                    >
-                                        <i className="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print
-                                    </a>
-                                </span>
-                                Company Name, Inc
+                                CodiGo - POS
                             </div>
 
                             <div className="invoice-header">
@@ -79,60 +104,36 @@ const PosModalBoleta = ({ mostrar, setMostrar }) => {
                                     <table className="table table-invoice">
                                         <thead>
                                             <tr>
-                                                <th>TASK DESCRIPTION</th>
+                                                <th>Descripción</th>
                                                 <th className="text-center" width="10%">
-                                                    RATE
+                                                    P. Unitario
                                                 </th>
                                                 <th className="text-center" width="10%">
-                                                    HOURS
+                                                    Cantidad
                                                 </th>
                                                 <th className="text-right" width="20%">
-                                                    LINE TOTAL
+                                                    Sub-Total
                                                 </th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>
-                                                    <span className="text-inverse">
-                                                        Website design &amp; development
-                                                    </span>
-                                                    <br />
-                                                    <small>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                        elit. Sed id sagittis arcu.
-                                                    </small>
-                                                </td>
-                                                <td className="text-center">$50.00</td>
-                                                <td className="text-center">50</td>
-                                                <td className="text-right">$2,500.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span className="text-inverse">Branding</span>
-                                                    <br />
-                                                    <small>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                        elit. Sed id sagittis arcu.
-                                                    </small>
-                                                </td>
-                                                <td className="text-center">$50.00</td>
-                                                <td className="text-center">40</td>
-                                                <td className="text-right">$2,000.00</td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span className="text-inverse">Redesign Service</span>
-                                                    <br />
-                                                    <small>
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                                                        elit. Sed id sagittis arcu.
-                                                    </small>
-                                                </td>
-                                                <td className="text-center">$50.00</td>
-                                                <td className="text-center">50</td>
-                                                <td className="text-right">$2,500.00</td>
-                                            </tr>
+                                            {objPedidoActual ? 
+                                            objPedidoActual.platos.map((objPlatoPedido) => {
+                                                    return (
+                                                        <tr>
+                                                            <td>
+                                                                <span className="text-inverse">
+                                                                {objPlatoPedido.plato_nom}
+                                                                </span>
+
+                                                            </td>
+                                                            <td className="text-center">S/. {objPlatoPedido.plato_pre}</td>
+                                                            <td className="text-center">{objPlatoPedido.cantidad}</td>
+                                                            <td className="text-right">S/. {+objPlatoPedido.plato_pre * +objPlatoPedido.cantidad}</td>
+                                                        </tr>
+                                                    );
+                                                }) : null
+                                            }
                                         </tbody>
                                     </table>
                                 </div>
@@ -155,7 +156,7 @@ const PosModalBoleta = ({ mostrar, setMostrar }) => {
                                     </div>
                                     <div className="invoice-price-right">
                                         <small>TOTAL</small>{' '}
-                                        <span className="f-w-600">$4508.00</span>
+                                        <span className="f-w-600">S/. {total}</span>
                                     </div>
                                 </div>
                             </div>
@@ -192,12 +193,7 @@ const PosModalBoleta = ({ mostrar, setMostrar }) => {
                 </div>
             </Modal.Body>
             <Modal.Footer>
-                <Button variant="secondary" onClick={() => setMostrar(false)}>
-                    Close
-                </Button>
-                <Button variant="primary" onClick={() => setMostrar(false)}>
-                    Save Changes
-                </Button>
+                <button className="btn btn-success" onClick={handlePagar} disable={cargandoPago}>PAGAR</button>
             </Modal.Footer>
         </Modal>
     )

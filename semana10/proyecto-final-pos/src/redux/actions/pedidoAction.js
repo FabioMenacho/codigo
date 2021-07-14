@@ -1,4 +1,5 @@
-import { AGREGAR_PLATO_A_PEDIDO } from "../types/types"
+import { AGREGAR_PLATO_A_PEDIDO, ELIMINAR_PEDIDO } from "../types/types"
+
 
 export const agregarPlatoAction = (objPlato, mesaId) => {
     return {
@@ -7,5 +8,12 @@ export const agregarPlatoAction = (objPlato, mesaId) => {
             objPlato: objPlato,
             mesaId: mesaId
         }
+    }
+}
+
+export const eliminarPedidoPorMesaIdAction = (mesaId) => {
+    return {
+        type: ELIMINAR_PEDIDO,
+        payload: mesaId
     }
 }
