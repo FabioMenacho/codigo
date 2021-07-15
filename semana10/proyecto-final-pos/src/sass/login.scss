@@ -67,16 +67,16 @@ ul {
     font-size: 1.1rem;
   }
   .formulario__input[type="email"] {
-    background-image: url("./../img/email.svg");
+    background-image: url("./../assets/images/email.svg");
     &:focus {
-      background-image: url("./../img/emailhover.svg");
+      background-image: url("./../assets/images/emailhover.svg");
     }
     // background-color: #222;
   }
   .formulario__input[type="password"] {
-    background-image: url("./../img/password.svg");
+    background-image: url("./../assets/images/password.svg");
     &:focus {
-      background-image: url("./../img/passwordhover.svg");
+      background-image: url("./../assets/images/passwordhover.svg");
     }
   }
   .formulario__submit {

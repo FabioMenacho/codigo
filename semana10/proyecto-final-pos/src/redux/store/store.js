@@ -1,6 +1,7 @@
 import {createStore, combineReducers, applyMiddleware, compose} from "redux"
 // redux-thunk para retornar una función y no una action normal y permite usar el dispatch varias veces en una misma funcion
 import thunk from "redux-thunk"
+import { authReducer } from "../reducers/authReducer";
 import { categoriaReducer } from "../reducers/categoriaReducer";
 import { mesaReducer } from "../reducers/mesaReducer";
 import { pedidoReducer } from "../reducers/pedidoReducer";
@@ -15,7 +16,8 @@ const reducers = combineReducers({
     mesa: mesaReducer,
     categoria: categoriaReducer,
     plato: platoReducer,
-    pedido: pedidoReducer
+    pedido: pedidoReducer,
+    auth: authReducer
 })
 
 export const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
